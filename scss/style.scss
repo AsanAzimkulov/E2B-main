@@ -1,5 +1,20 @@
-// main site styles
-@import './main.scss';
+// // main site styles
+// @import './main.scss';
 
 // Welcome chain styles
 
+// Global (containers, vars etc.)
+
+@import './global/variables.scss';
+
+@import './global/containers.scss';
+
+@import './global/helpers.scss';
+
+@import './global/page.scss';
+
+@import './global/uikit.scss';
+
+// Page blocks
+
+@import './blocks/welcome-email-chain-promo.scss';

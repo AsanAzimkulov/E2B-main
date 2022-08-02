@@ -1,0 +1,38 @@
+@mixin button($bg: unset, $txt-color:white, $br: 0, $bg-hover: unset, $bg-active: unset){
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 110.4%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $bg;
+  border-radius: $br;
+  width: 100%;
+  padding: 20px 0;
+  border: none;
+  color: $txt-color;
+  &:hover{
+    background: $bg-hover;
+  }
+  &:active{
+    background: $bg-active;
+  }
+}
+
+.blue-button{
+  @include button(linear-gradient(91.18deg, #1C89D1 0.05%, #2FA0EB 99.98%), white, 15px,linear-gradient(91.18deg, #0F72B3 0.05%, #1D8BD3 99.98%),linear-gradient(91.18deg, #0F659D 0.05%, #0373BD 99.98%));
+}
+
+.orange-button{
+  @include button(linear-gradient(91.01deg, #FF981E 0%, #FEB62A 100%), white, 20px, linear-gradient(91.01deg, #E08010 0%, #FFAF15 100%), linear-gradient(91.01deg, #DA7805 0%, #DD9200 100%));
+}
+
+.blue-bordered-button{
+
+}
+
+.blue-link-with-icon {
+
+}
