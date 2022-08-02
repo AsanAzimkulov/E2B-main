@@ -1,0 +1,297 @@
+.promo {
+  margin-top: 20px;
+  margin-bottom: 75px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 130%;
+  @media(min-width: 768px){
+    margin-bottom: 100px;
+  }
+  @media(min-width: 1920px){
+    margin-bottom: 120px;
+    margin-top: 0px; 
+  }
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__image {
+    margin: 20px 0;
+    width: 100%;
+    @media(min-width: 768px){
+      width: 44.35%;
+      margin: 0;
+    }
+  }
+
+  &__text-wrapper{    
+    margin-bottom: 24px;
+    @media(min-width: 768px){
+      width: 55%;
+      order: -1;     
+      margin-bottom: 50px;
+    }
+    @media(min-width: 1000px){
+      margin-bottom: auto;
+    }
+    @media(min-width: 1920px){
+      width: 40.34%;
+      margin-top: 20px;
+      
+    }
+
+  }
+  &__big-title{
+    width: 100%;
+    display: none;
+    @media(min-width: 768px){
+      display: block;
+      margin-bottom: 30px;
+    }
+      &--mobile{
+        display: none;
+        @media(max-width: 767.5px){
+          display: block;
+        }
+      }
+    
+  }
+  &__title {
+    color: $black-2;
+    font-weight: 500;
+    margin-bottom: 15px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 130%;
+    @media(min-width: 768px){
+      font-size: 16px;
+    }
+    @media(min-width: 1000px){
+      margin-bottom: 20px;
+    }
+    @media(min-width: 1200px) and (max-width: 1919.5px){
+      margin-top: 40px;
+      font-size: 17px;
+    }
+
+    @media(min-width: 1920px){
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__advantages-list {
+    color: $black;
+    list-style-type: none;
+    padding: 0;
+
+    @media(min-width: 600px){
+      font-size: 16px;
+    }
+
+    @media(min-width: 1228px) and (max-width: 1920px){
+      font-size: 17px;
+    }
+
+    @media(min-width: 1000px){
+      margin-bottom: 4%;
+    }
+
+    @media(min-width: 1228px) and (max-width: 1920px){
+      font-size: 19px;
+    }
+
+    &__item {
+      padding-left: 17px;
+      margin-bottom: 15px;
+      position: relative;
+
+      &:before{
+        display: block;
+        position: absolute;
+        left: 0px;
+        top: 6px;
+        content: '';
+        width:7px;
+        height: 7px;
+        background: $list-bullets;
+        border-radius: 50%;
+      }
+      &:last-child{
+        margin-bottom: none;
+      }
+      @media(min-width: 1000px){
+        margin-bottom: 3%;
+      }
+
+      @media(min-width: 1920px){
+        margin-bottom: 15px;
+        font-size: 18px;
+      }
+    }
+  }
+  &__down-bar{
+    width: 100%;
+    @media(min-width: 768px){
+      display: flex;
+      width: 68.92%;
+    }
+
+    @media(min-width: 1920px){
+      width: 41.70%;
+    }                                                                            
+  }
+  &__price-block {
+    @include price-block;
+  }
+
+  &__button {
+    @include blue-button;
+
+    padding: 15px 0;
+    @media(min-width: 768px){
+      width: 64.78%;
+      padding: 20px 0;
+      order: -1;
+    }
+
+    
+  }
+
+
+  &--invert{
+    background: $gr-dark-blue;
+  }
+
+  &--invert & {
+      &__big-title{
+        color: #FFFFFF;
+        &--mobile{
+          color: #FFFFFF;
+          margin-bottom: 30px;
+        }
+      }
+      &__image{
+        display: none;
+        @media(min-width: 1920px){
+          display: block;
+        }
+      }
+      &__title {
+        color: #FFFFFF;
+      }
+      &__advantages-list__item{
+        color: #FFFFFF;
+        padding-left: 34px;
+        &::before{
+          display: block;
+          position: absolute;
+          left: 0px;
+          top: 6px;
+          content: '';
+          width:19.09px;
+          height: 18px;
+          background: transparent;
+          background-image: url('../../images/icons/empty-tick.svg');
+          background-size: 19.09px 18px;
+          background-repeat: no-repeat;
+        }
+      }
+      &__image{
+        margin-left: auto !important;
+      }
+      &__wrapper{
+        padding-top: 30px;
+        padding-bottom: 83px;
+        @media(min-width: 768px){
+          padding-top: 40px;
+          padding-bottom: 80px;
+        }
+        @media(min-width: 1920px){
+          padding-top: 50px;
+          padding-bottom: 70px;
+
+        }
+      }
+      &__price-block__price{
+        color: #FFFFFF;
+      }
+      &__button{
+        @include orange-button;
+        padding: 15px 0;
+        @media(min-width: 768px){
+          padding: 20px 0;
+        }
+      }
+
+
+
+      @media(min-width: 768px){
+        &__advantages-list{
+            margin-bottom: 40px;
+          }
+        }
+        &__advantages-list__item{
+          padding-left: 39px;
+          &::before{
+            display: block;
+            position: absolute;
+            left: 6px;
+            top: 0px;
+            content: '';
+            width:24.09px;
+            height: 23px;
+            background: transparent;
+            background-image: url('../../images/icons/empty-tick.svg');
+            background-size: 24.09px 23px;
+            background-repeat: no-repeat;
+          }
+        }
+
+        @media(min-width: 1024px){
+          &__advantages-list{
+              margin-bottom: 40px;
+            }
+          }
+          &__advantages-list__item{
+            padding-left: 44px;
+            &::before{
+              display: block;
+              position: absolute;
+              left: 0px;
+              top: -3px;
+              content: '';
+              width:29.09px;
+              height: 28px;
+              background: transparent;
+              background-image: url('../../images/icons/empty-tick.svg');
+              background-size: 29.09px 28px;
+              background-repeat: no-repeat;
+            }
+          }
+          @media(min-width: 1920px){
+            &__text-wrapper{
+              margin-bottom: 0;
+              margin-top: -5%;
+            }
+            &__wrapper{
+              padding-top: 0px;
+            }
+            &__image{
+              margin-top: -44px;
+              margin-left: 84px !important;
+              width: 50%;
+            }
+            &__advantages-list{
+              margin-bottom: 0px;
+            }
+            &__down-bar{
+              margin-top: -7.4%;
+            }
+          }
+      }
+  }
+
+

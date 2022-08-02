@@ -1,4 +1,4 @@
-// // main site styles
+/// // main site styles
 // @import './main.scss';
 
 // Welcome chain styles
@@ -17,8 +17,10 @@
 
 // Page blocks
 
-@import './blocks/welcome-email-chain-promo.scss';
+@import './blocks/promo.scss';
 
 @import './blocks/advantages.scss';
 
 @import './blocks/side-nav.scss';
+
+@import './blocks/offer.scss';

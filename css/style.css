@@ -40,52 +40,6 @@
   }
 }
 
-.blue-button {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 110.4%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(91.18deg, #1C89D1 0.05%, #2FA0EB 99.98%);
-  border-radius: 15px;
-  width: 100%;
-  padding: 20px 0;
-  border: none;
-  color: white;
-}
-.blue-button:hover {
-  background: linear-gradient(91.18deg, #0F72B3 0.05%, #1D8BD3 99.98%);
-}
-.blue-button:active {
-  background: linear-gradient(91.18deg, #0F659D 0.05%, #0373BD 99.98%);
-}
-
-.orange-button {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 110.4%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(91.01deg, #FF981E 0%, #FEB62A 100%);
-  border-radius: 20px;
-  width: 100%;
-  padding: 20px 0;
-  border: none;
-  color: white;
-}
-.orange-button:hover {
-  background: linear-gradient(91.01deg, #E08010 0%, #FFAF15 100%);
-}
-.orange-button:active {
-  background: linear-gradient(91.01deg, #DA7805 0%, #DD9200 100%);
-}
-
 .promo {
   margin-top: 20px;
   margin-bottom: 75px;
@@ -117,17 +71,6 @@
   .promo__image {
     width: 44.35%;
     margin: 0;
-    margin-top: -40px;
-  }
-}
-@media (min-width: 1920px) {
-  .promo__image {
-    margin-bottom: 0;
-  }
-}
-@media (min-width: 1920px) {
-  .promo__image {
-    margin-left: 103px;
   }
 }
 .promo__text-wrapper {
@@ -148,13 +91,25 @@
 @media (min-width: 1920px) {
   .promo__text-wrapper {
     width: 40.34%;
-    margin-bottom: auto;
     margin-top: 20px;
   }
 }
-@media (min-width: 2150px) {
-  .promo__text-wrapper {
-    margin-top: 40px;
+.promo__big-title {
+  width: 100%;
+  display: none;
+}
+@media (min-width: 768px) {
+  .promo__big-title {
+    display: block;
+    margin-bottom: 30px;
+  }
+}
+.promo__big-title--mobile {
+  display: none;
+}
+@media (max-width: 767.5px) {
+  .promo__big-title--mobile {
+    display: block;
   }
 }
 .promo__title {
@@ -167,7 +122,6 @@
 }
 @media (min-width: 768px) {
   .promo__title {
-    margin-top: 10px;
     font-size: 16px;
   }
 }
@@ -186,12 +140,6 @@
   .promo__title {
     font-size: 18px;
     margin-bottom: 20px;
-  }
-}
-@media (min-width: 2260px) {
-  .promo__title {
-    font-size: 20px;
-    margin-bottom: 30px;
   }
 }
 .promo__advantages-list {
@@ -258,15 +206,9 @@
     width: 68.92%;
   }
 }
-@media (min-width: 1440px) and (max-width: 1919.5px) {
-  .promo__down-bar {
-    margin-top: -40px;
-  }
-}
 @media (min-width: 1920px) {
   .promo__down-bar {
     width: 41.7%;
-    margin-top: -30px;
   }
 }
 .promo__price-block {
@@ -304,14 +246,184 @@
     line-height: 30px;
   }
 }
-.promo .blue-button {
+.promo__button {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 110.4%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(91.18deg, #1C89D1 0.05%, #2FA0EB 99.98%);
+  border-radius: 15px;
+  width: 100%;
+  padding: 20px 0;
+  border: none;
+  color: white;
   padding: 15px 0;
 }
+.promo__button:hover {
+  background: linear-gradient(91.18deg, #0F72B3 0.05%, #1D8BD3 99.98%);
+}
+.promo__button:active {
+  background: linear-gradient(91.18deg, #0F659D 0.05%, #0373BD 99.98%);
+}
 @media (min-width: 768px) {
-  .promo .blue-button {
+  .promo__button {
     width: 64.78%;
     padding: 20px 0;
     order: -1;
+  }
+}
+.promo--invert {
+  background: linear-gradient(97.92deg, #1F3050 0%, #14326B 100%);
+}
+.promo--invert .promo__big-title {
+  color: #FFFFFF;
+}
+.promo--invert .promo__big-title--mobile {
+  color: #FFFFFF;
+  margin-bottom: 30px;
+}
+.promo--invert .promo__image {
+  display: none;
+}
+@media (min-width: 1920px) {
+  .promo--invert .promo__image {
+    display: block;
+  }
+}
+.promo--invert .promo__title {
+  color: #FFFFFF;
+}
+.promo--invert .promo__advantages-list__item {
+  color: #FFFFFF;
+  padding-left: 34px;
+}
+.promo--invert .promo__advantages-list__item::before {
+  display: block;
+  position: absolute;
+  left: 0px;
+  top: 6px;
+  content: "";
+  width: 19.09px;
+  height: 18px;
+  background: transparent;
+  background-image: url("../../images/icons/empty-tick.svg");
+  background-size: 19.09px 18px;
+  background-repeat: no-repeat;
+}
+.promo--invert .promo__image {
+  margin-left: auto !important;
+}
+.promo--invert .promo__wrapper {
+  padding-top: 30px;
+  padding-bottom: 83px;
+}
+@media (min-width: 768px) {
+  .promo--invert .promo__wrapper {
+    padding-top: 40px;
+    padding-bottom: 80px;
+  }
+}
+@media (min-width: 1920px) {
+  .promo--invert .promo__wrapper {
+    padding-top: 50px;
+    padding-bottom: 70px;
+  }
+}
+.promo--invert .promo__price-block__price {
+  color: #FFFFFF;
+}
+.promo--invert .promo__button {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 110.4%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(91.01deg, #FF981E 0%, #FEB62A 100%);
+  border-radius: 15px;
+  width: 100%;
+  padding: 20px 0;
+  border: none;
+  color: white;
+  padding: 15px 0;
+}
+.promo--invert .promo__button:hover {
+  background: linear-gradient(91.01deg, #E08010 0%, #FFAF15 100%);
+}
+.promo--invert .promo__button:active {
+  background: linear-gradient(91.01deg, #DA7805 0%, #DD9200 100%);
+}
+@media (min-width: 768px) {
+  .promo--invert .promo__button {
+    padding: 20px 0;
+  }
+}
+@media (min-width: 768px) {
+  .promo--invert .promo__advantages-list {
+    margin-bottom: 40px;
+  }
+}
+.promo--invert .promo__advantages-list__item {
+  padding-left: 39px;
+}
+.promo--invert .promo__advantages-list__item::before {
+  display: block;
+  position: absolute;
+  left: 6px;
+  top: 0px;
+  content: "";
+  width: 24.09px;
+  height: 23px;
+  background: transparent;
+  background-image: url("../../images/icons/empty-tick.svg");
+  background-size: 24.09px 23px;
+  background-repeat: no-repeat;
+}
+@media (min-width: 1024px) {
+  .promo--invert .promo__advantages-list {
+    margin-bottom: 40px;
+  }
+}
+.promo--invert .promo__advantages-list__item {
+  padding-left: 44px;
+}
+.promo--invert .promo__advantages-list__item::before {
+  display: block;
+  position: absolute;
+  left: 0px;
+  top: -3px;
+  content: "";
+  width: 29.09px;
+  height: 28px;
+  background: transparent;
+  background-image: url("../../images/icons/empty-tick.svg");
+  background-size: 29.09px 28px;
+  background-repeat: no-repeat;
+}
+@media (min-width: 1920px) {
+  .promo--invert .promo__text-wrapper {
+    margin-bottom: 0;
+    margin-top: -5%;
+  }
+  .promo--invert .promo__wrapper {
+    padding-top: 0px;
+  }
+  .promo--invert .promo__image {
+    margin-top: -44px;
+    margin-left: 84px !important;
+    width: 50%;
+  }
+  .promo--invert .promo__advantages-list {
+    margin-bottom: 0px;
+  }
+  .promo--invert .promo__down-bar {
+    margin-top: -7.4%;
   }
 }
 
@@ -359,7 +471,7 @@
   .advantages__list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
   }
   .advantages__list__item {
     width: 47.88%;
@@ -368,6 +480,7 @@
   }
   .advantages__list__item:last-child {
     margin-bottom: 0;
+    margin: 0 auto;
   }
   .advantages__list__item__image {
     width: 77px;
@@ -376,6 +489,15 @@
   .advantages__list__item__desctiption {
     font-size: 16px;
     line-height: 130%;
+  }
+}
+@media (min-width: 1920px) {
+  .advantages__list__item {
+    padding: 55px 20px 55px 10px;
+    width: 31.62%;
+  }
+  .advantages__list__item:last-child {
+    margin: 0;
   }
 }
 

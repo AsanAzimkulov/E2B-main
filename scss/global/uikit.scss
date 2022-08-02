@@ -21,12 +21,12 @@
   }
 }
 
-.blue-button{
+@mixin blue-button{
   @include button(linear-gradient(91.18deg, #1C89D1 0.05%, #2FA0EB 99.98%), white, 15px,linear-gradient(91.18deg, #0F72B3 0.05%, #1D8BD3 99.98%),linear-gradient(91.18deg, #0F659D 0.05%, #0373BD 99.98%));
 }
 
-.orange-button{
-  @include button(linear-gradient(91.01deg, #FF981E 0%, #FEB62A 100%), white, 20px, linear-gradient(91.01deg, #E08010 0%, #FFAF15 100%), linear-gradient(91.01deg, #DA7805 0%, #DD9200 100%));
+@mixin orange-button{
+  @include button(linear-gradient(91.01deg, #FF981E 0%, #FEB62A 100%), white, 15px, linear-gradient(91.01deg, #E08010 0%, #FFAF15 100%), linear-gradient(91.01deg, #DA7805 0%, #DD9200 100%));
 }
 
 .blue-bordered-button{
@@ -35,4 +35,37 @@
 
 .blue-link-with-icon {
 
+}
+
+
+@mixin price-block {
+  margin-left: 7%;
+    margin-bottom: 10px;
+    @media(min-width: 600px){
+      margin-bottom: 20px;
+    }
+
+    @media(min-width: 768px){
+      min-width: 160px;
+      margin-bottom: 0;
+    }
+    &__discount{
+      color: $price-discount;
+      font-size: 16px;
+      line-height: 110.4%;
+      text-decoration-line: line-through;
+      margin-bottom: 0;
+
+    }
+    &__price{
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 22px;
+      color: $black;
+      margin-bottom: 0;
+      @media(min-width: 768px){
+        font-size: 25px;
+        line-height: 30px;
+      }
+    }
 }
