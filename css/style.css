@@ -112,7 +112,7 @@
     display: block;
   }
 }
-.promo__title {
+.promo__sub-title {
   color: #000000;
   font-weight: 500;
   margin-bottom: 15px;
@@ -121,23 +121,23 @@
   line-height: 130%;
 }
 @media (min-width: 768px) {
-  .promo__title {
+  .promo__sub-title {
     font-size: 16px;
   }
 }
 @media (min-width: 1000px) {
-  .promo__title {
+  .promo__sub-title {
     margin-bottom: 20px;
   }
 }
 @media (min-width: 1200px) and (max-width: 1919.5px) {
-  .promo__title {
+  .promo__sub-title {
     margin-top: 40px;
     font-size: 17px;
   }
 }
 @media (min-width: 1920px) {
-  .promo__title {
+  .promo__sub-title {
     font-size: 18px;
     margin-bottom: 20px;
   }
@@ -204,11 +204,13 @@
   .promo__down-bar {
     display: flex;
     width: 68.92%;
+    margin-top: -4%;
   }
 }
 @media (min-width: 1920px) {
   .promo__down-bar {
     width: 41.7%;
+    margin-top: 0;
   }
 }
 .promo__price-block {
@@ -279,6 +281,61 @@
 .promo--invert {
   background: linear-gradient(97.92deg, #1F3050 0%, #14326B 100%);
 }
+.promo--invert .promo__advantages-list__item {
+  position: relative;
+  padding-left: 34px;
+  color: #FFFFFF;
+}
+.promo--invert .promo__advantages-list__item::before {
+  display: block;
+  position: absolute;
+  left: 0px;
+  top: 6px;
+  content: "";
+  width: 19.09px;
+  height: 18px;
+  background: transparent;
+  background-image: url("../../images/icons/empty-tick.svg");
+  background-size: 19.09px 18px;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .promo--invert .promo__advantages-list__item {
+    padding-left: 39px;
+    position: relative;
+  }
+  .promo--invert .promo__advantages-list__item::before {
+    display: block;
+    position: absolute;
+    left: 6px;
+    top: 0px;
+    content: "";
+    width: 24.09px;
+    height: 23px;
+    background: transparent;
+    background-image: url("../../images/icons/empty-tick.svg");
+    background-size: 24.09px 23px;
+    background-repeat: no-repeat;
+  }
+}
+@media (min-width: 1024px) {
+  .promo--invert .promo__advantages-list__item {
+    padding-left: 44px;
+  }
+  .promo--invert .promo__advantages-list__item::before {
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: -3px;
+    content: "";
+    width: 29.09px;
+    height: 28px;
+    background: transparent;
+    background-image: url("../../images/icons/empty-tick.svg");
+    background-size: 29.09px 28px;
+    background-repeat: no-repeat;
+  }
+}
 .promo--invert .promo__big-title {
   color: #FFFFFF;
 }
@@ -294,25 +351,8 @@
     display: block;
   }
 }
-.promo--invert .promo__title {
+.promo--invert .promo__sub-title {
   color: #FFFFFF;
-}
-.promo--invert .promo__advantages-list__item {
-  color: #FFFFFF;
-  padding-left: 34px;
-}
-.promo--invert .promo__advantages-list__item::before {
-  display: block;
-  position: absolute;
-  left: 0px;
-  top: 6px;
-  content: "";
-  width: 19.09px;
-  height: 18px;
-  background: transparent;
-  background-image: url("../../images/icons/empty-tick.svg");
-  background-size: 19.09px 18px;
-  background-repeat: no-repeat;
 }
 .promo--invert .promo__image {
   margin-left: auto !important;
@@ -369,50 +409,24 @@
     margin-bottom: 40px;
   }
 }
-.promo--invert .promo__advantages-list__item {
-  padding-left: 39px;
-}
-.promo--invert .promo__advantages-list__item::before {
-  display: block;
-  position: absolute;
-  left: 6px;
-  top: 0px;
-  content: "";
-  width: 24.09px;
-  height: 23px;
-  background: transparent;
-  background-image: url("../../images/icons/empty-tick.svg");
-  background-size: 24.09px 23px;
-  background-repeat: no-repeat;
-}
 @media (min-width: 1024px) {
   .promo--invert .promo__advantages-list {
     margin-bottom: 40px;
   }
 }
-.promo--invert .promo__advantages-list__item {
-  padding-left: 44px;
-}
-.promo--invert .promo__advantages-list__item::before {
-  display: block;
-  position: absolute;
-  left: 0px;
-  top: -3px;
-  content: "";
-  width: 29.09px;
-  height: 28px;
-  background: transparent;
-  background-image: url("../../images/icons/empty-tick.svg");
-  background-size: 29.09px 28px;
-  background-repeat: no-repeat;
+.promo--invert .promo__down-bar {
+  margin-top: 0;
 }
 @media (min-width: 1920px) {
+  .promo--invert .promo {
+    padding-top: 20px;
+  }
   .promo--invert .promo__text-wrapper {
     margin-bottom: 0;
     margin-top: -5%;
   }
   .promo--invert .promo__wrapper {
-    padding-top: 0px;
+    padding-top: 20px;
   }
   .promo--invert .promo__image {
     margin-top: -44px;
