@@ -1,4 +1,5 @@
 @mixin button($bg: unset, $txt-color:white, $br: 0, $bg-hover: unset, $bg-active: unset){
+  text-decoration: none;
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 600;
@@ -15,9 +16,11 @@
   color: $txt-color;
   &:hover{
     background: $bg-hover;
+    color: $txt-color;
   }
   &:active{
     background: $bg-active;
+    color: $txt-color;
   }
 }
 
@@ -30,6 +33,7 @@
 }
 
 @mixin button-bordered($br-width: 1px, $br-style: solid, $br-color, $txt-color:white, $br-radius: 0, $br-hover: unset, $br-active: unset, $txt-color-hover: unset, $txt-color-active: unset){
+  text-decoration: none;
   background-color: transparent;
   font-family: 'Montserrat';
   font-style: normal;
@@ -80,6 +84,26 @@
       background-image: url($img-active);
     }
     
+  }
+}
+
+@mixin link-with-icon($color){
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding:17px 0;
+  background-color: transparent;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 130%;
+  color: $color !important;
+  &__image{
+    margin-left: 15px;
   }
 }
 
@@ -211,5 +235,31 @@
     height: 11px;
     background: transparent;
     border:2px solid $color;
+  }
+}
+
+@mixin blue-frame{
+  overflow: hidden;
+  width:150px;
+  height: 135px;
+  border-radius: 40px;
+
+  &:hover{
+    outline: 1px solid #1C89D1;
+    outline-offset: -1px;
+  }
+  &:active{
+    outline: 2px solid rgba(#1C89D1, 0.4);
+    outline-offset: -2px;
+  }
+
+
+  @media(min-width: 768px){
+    width: 175px;
+    height: 158px;
+  }
+  @media(min-width: 1920px){
+    width:150px;
+    height: 135px;
   }
 }

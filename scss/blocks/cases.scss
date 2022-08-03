@@ -1,4 +1,5 @@
 .cases{
+  overflow: hidden;
   margin-bottom: 80px;
   &__button {
     @include blue-button;
@@ -14,9 +15,10 @@
   &__text-list{
     list-style-type: none;
     li {
+      padding-left: 0 !important;
       margin-bottom: 15px !important;
       &:last-child{
-        margin-bottom: none;
+        margin-bottom: 0;
       }
       &::before{
         display: none;

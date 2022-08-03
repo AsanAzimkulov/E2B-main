@@ -1,0 +1,22 @@
+@mixin item-spacing($space){
+  margin-bottom: $space;
+  &:last-child{
+    margin-bottom: 0;
+  }
+}
+@mixin item-spacing-ver($space){
+  margin-right: $space;
+  &:last-child{
+    margin-right: 0;
+  }
+}
+
+@mixin ver-p($top, $bottom: $top){
+  padding-top: $top;
+  padding-bottom: $bottom;
+}
+
+@mixin ver-m($top, $bottom: $top){
+  margin-top: $top;
+  margin-bottom: $bottom;
+}
