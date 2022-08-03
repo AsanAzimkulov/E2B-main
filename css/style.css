@@ -515,9 +515,13 @@
   .advantages__list__item {
     padding: 55px 20px 55px 10px;
     width: 31.62%;
+    margin-bottom: 0px;
   }
   .advantages__list__item:last-child {
     margin: 0;
+  }
+  .advantages__list__item:nth-child(4n) {
+    margin: 30px 0;
   }
 }
 
@@ -973,7 +977,7 @@
   }
   .reviews__down-bar {
     display: flex;
-    width: 68.92%;
+    width: 78.92%;
   }
   .reviews__down-bar__button {
     order: -1;
@@ -1063,7 +1067,7 @@
   .reviews__wrapper-image-text--desctop {
     overflow: hidden;
   }
-  .reviews img {
+  .reviews__wrapper-image-text--desctop img {
     margin-bottom: 20%;
   }
 }
@@ -1380,7 +1384,7 @@
   padding-bottom: 20px;
 }
 .consulting__title {
-  color: white;
+  color: white !important;
   font-weight: 600;
   font-size: 18px;
   line-height: 22px;
@@ -1411,6 +1415,7 @@
 }
 .consulting__button--green {
   background: linear-gradient(92deg, #61FD7D 1.97%, #2BB826 100%), linear-gradient(92.14deg, #2AAAED 0%, #229ED9 100%);
+  padding: 10px 0;
 }
 .consulting__button--green .consulting__button__image {
   display: block;
