@@ -867,6 +867,10 @@
   text-align: left;
   margin-bottom: 15px;
 }
+.reviews__read-more a {
+  color: white;
+  text-decoration: none;
+}
 .reviews__inserted-block {
   margin-top: 26px;
 }
@@ -1361,6 +1365,106 @@
     line-height: 20px;
     padding: 0 10%;
     width: 150px;
+  }
+}
+
+.consulting {
+  display: block;
+  background: linear-gradient(97.92deg, #1F3050 0%, #14326B 100%);
+}
+.consulting__image-wrapper {
+  display: none;
+}
+.consulting__wrapper {
+  padding-top: 25px;
+  padding-bottom: 20px;
+}
+.consulting__title {
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  margin-bottom: 30px;
+}
+.consulting__title span {
+  color: #FEB62A;
+}
+.consulting__button {
+  margin-bottom: 20px;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12.5px 0;
+  border-radius: 15px;
+}
+.consulting__button:last-child {
+  margin-bottom: 0;
+}
+.consulting__button--blue {
+  background: linear-gradient(92.14deg, #2AAAED 0%, #229ED9 100%);
+}
+.consulting__button--blue .consulting__button__image {
+  display: block;
+  margin-right: 15px;
+}
+.consulting__button--green {
+  background: linear-gradient(92deg, #61FD7D 1.97%, #2BB826 100%), linear-gradient(92.14deg, #2AAAED 0%, #229ED9 100%);
+}
+.consulting__button--green .consulting__button__image {
+  display: block;
+  margin-right: 7px;
+}
+@media (min-width: 768px) {
+  .consulting__wrapper {
+    padding-top: 30px;
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .consulting__text-wrapper {
+    width: 47.88%;
+  }
+  .consulting__title {
+    font-size: 22px;
+    line-height: 27px;
+  }
+  .consulting__image-wrapper {
+    display: block;
+    width: 339px;
+    height: 10%;
+    position: relative;
+  }
+  .consulting__image {
+    position: absolute;
+    top: -90px;
+  }
+}
+@media (min-width: 1920px) {
+  .consulting__wrapper {
+    padding-top: 60px;
+    padding-bottom: 50px;
+  }
+  .consulting__text-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .consulting__image-wrapper {
+    width: 532px;
+  }
+  .consulting__image {
+    top: -156px;
+  }
+  .consulting__title {
+    font-size: 36px;
+    line-height: 41px;
+    margin-bottom: 50px;
+  }
+  .consulting__button {
+    margin: 0;
+    width: 47.36%;
   }
 }
 /*# sourceMappingURL=maps/style.css.map */
