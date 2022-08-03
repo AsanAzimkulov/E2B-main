@@ -47,8 +47,11 @@
     }
   }
 
-  @media(max-width: 768px){
-    width: 100%;
+  @media(max-width: 767.5px){
+    &__outer-wrapper {
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 
 
@@ -57,6 +60,9 @@
     &__wrapper{
       padding-top: 30px;
       padding-bottom: 30px;
+    }
+    &__outer-wrapper{
+      max-width: auto;
     }
 
     &__list{

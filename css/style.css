@@ -661,15 +661,19 @@
 .additional-services__list__item::last-child {
   margin-bottom: 0;
 }
-@media (max-width: 768px) {
-  .additional-services {
-    width: 100%;
+@media (max-width: 767.5px) {
+  .additional-services__outer-wrapper {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 @media (min-width: 768px) {
   .additional-services__wrapper {
     padding-top: 30px;
     padding-bottom: 30px;
+  }
+  .additional-services__outer-wrapper {
+    max-width: auto;
   }
   .additional-services__list {
     justify-content: space-between;
