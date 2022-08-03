@@ -130,7 +130,7 @@
     }
     &__down-bar{
       display: flex;
-      width: 68.92%;
+      width: 78.92%;
       &__button{
         order: -1;
       }
@@ -216,11 +216,12 @@
   @media(min-width: 2151px){
     &__wrapper-image-text--desctop{
       overflow: hidden;
+      img{
+        margin-bottom: 20%;
+      }
     }
     overflow: visible;
-    img{
-      margin-bottom: 20%;
-    }
+
   }
 
   @media(min-width: 2200px){
