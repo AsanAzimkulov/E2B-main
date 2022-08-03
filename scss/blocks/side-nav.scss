@@ -1,10 +1,13 @@
 .side-nav {
   display: none;
+  &--invert{
+    filter: invert(1);
+  }
   @media(min-width: 1920px){
     display: block;
   }
   position: fixed;
-  top: 274px;
+  top: 288px;
   left: 85px;
   &__nav {
     position: relative;

@@ -29,12 +29,58 @@
   @include button(linear-gradient(91.01deg, #FF981E 0%, #FEB62A 100%), white, 15px, linear-gradient(91.01deg, #E08010 0%, #FFAF15 100%), linear-gradient(91.01deg, #DA7805 0%, #DD9200 100%));
 }
 
-.blue-bordered-button{
-
+@mixin button-bordered($br-width: 1px, $br-style: solid, $br-color, $txt-color:white, $br-radius: 0, $br-hover: unset, $br-active: unset, $txt-color-hover: unset, $txt-color-active: unset){
+  background-color: transparent;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 130%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: $br-width $br-style $br-color;
+  border-radius: $br-radius;
+  width: 100%;
+  padding: 13px 0;
+  border: none;
+  color: $txt-color;
+  &:hover{
+    border-color: $br-hover;
+    color: $txt-color-hover;
+  }
+  &:active{
+    border-color: $br-active;
+    color: $txt-color-active;
+  }
 }
 
-.blue-link-with-icon {
+@mixin blue-bordered-button($br-radius: 15px){
+  @include button-bordered(2px, solid, $ui-blue, $ui-blue, $br-radius, $ui-blue-hover, $ui-blue-active, $ui-blue-hover, $ui-blue-active)
+}
 
+@mixin blue-link-with-icon($width: auto, $height: auto, $img, $img-hover, $img-active) {
+  @include blue-bordered-button(0px);
+  border: none;
+  text-decoration: none;
+  &__image{
+    margin-left: 15px;
+    background-image: url($img);
+    width: $width;
+    height: $height;
+  }
+  &:hover{
+    &__image{
+      background-image: url($img-hover);
+    }
+    
+  }
+  &:active{
+    &__image{
+      background-image: url($img-active);
+    }
+    
+  }
 }
 
 
@@ -68,6 +114,31 @@
         line-height: 30px;
       }
     }
+}
+
+@mixin price-with-button-block{
+
+  &__button {
+    @include blue-button;
+
+    padding: 15px 0;
+    @media(min-width: 768px){
+      width: 64.78%;
+      padding: 20px 0;
+      order: -1;
+    }    
+  }
+    width: 100%;
+    @media(min-width: 768px){
+      display: flex;
+      width: 68.92%;
+      // margin-top: -4%;
+    }
+
+    @media(min-width: 1920px){
+      width: 41.70%;
+      margin-top: 0;
+    }                                                                            
 }
 
 @mixin tick-bullet($inverted: false) {
@@ -122,5 +193,23 @@
       background-size: 29.09px 28px;
       background-repeat: no-repeat;
     }
+  }
+}
+
+
+@mixin empty-bullet($color) {
+  position: relative;
+  padding-left: 26px;
+  &::before{
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 4px;
+    content: '';
+    border-radius: 50%;
+    width:11px;
+    height: 11px;
+    background: transparent;
+    border:2px solid $color;
   }
 }
