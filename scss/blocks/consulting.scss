@@ -9,7 +9,7 @@
   }
 
   &__title {
-    color: white;
+    color: white !important;
     font-weight: 600;
     font-size: 18px;
     line-height: 22px;
@@ -39,7 +39,8 @@
     }
 
     &--green{
-      background: linear-gradient(92deg, #61FD7D 1.97%, #2BB826 100%), linear-gradient(92.14deg, #2AAAED 0%, #229ED9 100%);      
+      background: linear-gradient(92deg, #61FD7D 1.97%, #2BB826 100%), linear-gradient(92.14deg, #2AAAED 0%, #229ED9 100%);
+      padding: 10px 0;      
       }
 
     &--green & {
