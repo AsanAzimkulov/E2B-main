@@ -137,7 +137,7 @@
     @media(min-width: 768px){
       display: flex;
       width: 68.92%;
-      margin-top: -4%;
+      // margin-top: -4%;
     }
 
     @media(min-width: 1920px){
@@ -169,7 +169,7 @@
 
   &--invert & {
       &__advantages-list__item{
-        @include tick-bullet;
+        @include tick-bullet(true);
         color: #FFFFFF;
         
       }
@@ -237,7 +237,8 @@
             padding-top: 20px;
             &__text-wrapper{
               margin-bottom: 0;
-              margin-top: -5%;
+              // margin-top: -5%;
+              padding-bottom: 8.4%;
             }
             &__wrapper{
               padding-top: 20px;
@@ -251,7 +252,8 @@
               margin-bottom: 0px;
             }
             &__down-bar{
-              margin-top: -7.4%;
+              margin-top: -8.4%;
+
             }
           }
       }
