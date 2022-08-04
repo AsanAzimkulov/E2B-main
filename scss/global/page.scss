@@ -1,5 +1,8 @@
 .page{
-
+  overflow-x: hidden;
+  &__body{
+    overflow-x: hidden;
+  }
 }
 
 @media (max-width: 991px){

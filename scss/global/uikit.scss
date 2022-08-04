@@ -139,10 +139,9 @@
 }
 
 @mixin price-with-button-block{
-
   &__button {
     @include blue-button;
-
+    width: 100%;
     padding: 15px 0;
     @media(min-width: 768px){
       width: 64.78%;
@@ -150,11 +149,13 @@
       order: -1;
     }    
   }
-    width: 100%;
+  &__price-block{
+    @include price-block;
+  }
     @media(min-width: 768px){
       display: flex;
+      flex-wrap: nowrap;
       width: 68.92%;
-      // margin-top: -4%;
     }
 
     @media(min-width: 1920px){
