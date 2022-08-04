@@ -47,7 +47,6 @@
   border-radius: $br-radius;
   width: 100%;
   padding: 13px 0;
-  border: none;
   color: $txt-color;
   &:hover{
     border-color: $br-hover;
@@ -73,13 +72,12 @@
     width: $width;
     height: $height;
   }
-  &:hover{
+  &:hover & {
     &__image{
       background-image: url($img-hover);
     }
-    
-  }
-  &:active{
+  }    
+  &:active & {
     &__image{
       background-image: url($img-active);
     }

@@ -1,5 +1,6 @@
 .side-nav {
   display: none;
+  z-index: 100;
   &--invert{
     filter: invert(1);
   }

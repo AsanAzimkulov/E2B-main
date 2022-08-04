@@ -3,6 +3,7 @@
 $black: #2D2D2D;
 $black-2: #000000;
 $orange:#FEB62A;
+$light-gray: #F3F3F3;
 $list-bullets: #0071BC;
 $list-active: #0071BC;
 $price-discount: #838383;
@@ -20,3 +21,7 @@ $lighting-yellow: #FFF48F;
 $gr-dark-blue:linear-gradient(97.92deg, #1F3050 0%, #14326B 100%);
 $gr-orange: linear-gradient(0deg, #FFFFFF, #FFFFFF),
 linear-gradient(91.01deg, #FF981E 0%, #FEB62A 100%);
+
+// Shadows
+
+$main-shadow: -12.2082px 12.2082px 24.4164px rgba(230, 230, 230, 0.2), 12.2082px -12.2082px 24.4164px rgba(230, 230, 230, 0.2), 12.2082px 12.2082px 30.9274px rgba(230, 230, 230, 0.9);
