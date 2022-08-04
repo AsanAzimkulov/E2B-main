@@ -52,6 +52,10 @@
           margin-bottom: 0;
           margin: 0 auto;
         }
+        &:nth-child(6n){
+          margin: 0;
+          margin-bottom: 20px;
+        }
         &__image{
           width: 77px;
           height: 77px;
@@ -69,12 +73,13 @@
       &__item{
         padding: 55px 20px 55px 10px;
         width: 31.62%;
-        margin-bottom: 0px;
+        margin-bottom: 30px;
         &:last-child{
+          margin-bottom: 0;
           margin: 0;
         }
-        &:nth-child(4n){
-          margin: 30px 0;
+        &:nth-child(1), &:nth-child(3n), &:nth-child(4){
+          margin-bottom: 30px
         }
       }
     }

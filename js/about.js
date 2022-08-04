@@ -19,13 +19,20 @@ $(document).ready(function () {
   });
 
 
-  // Новый slider
-  if (window.matchMedia("(max-width: 767px)").matches) {
-    if ($('.our-workers .slider__item').length > 1) {
-      new ChiefSlider('.our-workers .slider');
+  // Новый slider(отзывы)
+  if (window.matchMedia("(max-width: 767.5px)").matches) {
+    if ($('.reviewers .slider__item').length > 1) {
+      new ChiefSlider('.reviewers .slider');
     }
   }
 
+  // Второй  новый слайдер(Специалисты)
+
+  if (window.matchMedia("(max-width: 767.5px)").matches) {
+    if ($('.specialists .slider__item').length > 1) {
+      new ChiefSlider('.specialists .slider');
+    }
+  }
 
 
 
