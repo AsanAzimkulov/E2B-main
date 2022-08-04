@@ -1,15 +1,9 @@
 .page{
-  &__title{
-    margin: 0 auto;
-    display: block;
-    color: $black;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 29px;
-    @media(min-width: 768px){
-      font-size: 36px;
-       line-height: 41px;
-    }
-  }
+
+}
+
+@media (max-width: 991px){
+.footer {
+  background: $gr-dark-blue;
+}
 }
