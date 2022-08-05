@@ -34,6 +34,12 @@ $(document).ready(function () {
     }
   }
 
+  // slider Video
+
+  if ($('.video .slider__item').length > 1) {
+    new ChiefSlider('.video .slider');
+  }
+
 
 
   // if ($(document).width() < 769) {

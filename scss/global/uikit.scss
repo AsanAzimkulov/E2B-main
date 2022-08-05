@@ -11,9 +11,10 @@
   background: $bg;
   border-radius: $br;
   width: 100%;
-  padding: 20px 0;
+  padding: 15px 0;
   border: none;
   color: $txt-color;
+  cursor: pointer;
   &:hover{
     background: $bg-hover;
     color: $txt-color;
@@ -33,6 +34,7 @@
 }
 
 @mixin button-bordered($br-width: 1px, $br-style: solid, $br-color, $txt-color:white, $br-radius: 0, $br-hover: unset, $br-active: unset, $txt-color-hover: unset, $txt-color-active: unset){
+  cursor: pointer;
   text-decoration: none;
   background-color: transparent;
   font-family: 'Montserrat';
@@ -62,24 +64,33 @@
   @include button-bordered(2px, solid, $ui-blue, $ui-blue, $br-radius, $ui-blue-hover, $ui-blue-active, $ui-blue-hover, $ui-blue-active)
 }
 
-@mixin blue-link-with-icon($width: auto, $height: auto, $img, $img-hover, $img-active) {
+@mixin blue-link-with-icon($width: auto, $height: auto, $img, $img-hover, $img-active,  $icon-spacing: 15px) {
   @include blue-bordered-button(0px);
   border: none;
   text-decoration: none;
-  &__image{
-    margin-left: 15px;
-    background-image: url($img);
+  &::after {
+    content: '';
+    background: url($img);
+    margin-left: $icon-spacing;
     width: $width;
     height: $height;
   }
-  &:hover & {
-    &__image{
-      background-image: url($img-hover);
+  &:hover{
+    &::after {
+      content: '';
+      background: url($img-hover);
+      margin-left: $icon-spacing;
+      width: $width;
+      height: $height;
     }
   }    
-  &:active & {
-    &__image{
-      background-image: url($img-active);
+  &:active{
+    &::after {
+      content: '';
+      background: url($img-active);
+      margin-left: $icon-spacing;
+      width: $width;
+      height: $height;
     }
     
   }
