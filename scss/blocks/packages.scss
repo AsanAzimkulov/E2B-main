@@ -610,6 +610,12 @@
       &__wrapper{
         width: 57.4% !important;
       }
+      tbody tr:nth-child(even) th:nth-child(1)::before {
+        left: 45%;
+    }
+    tbody tr:nth-child(even) th:nth-child(3)::before {
+      left: 44%;
+  }
       thead{
         tr{
           th{
