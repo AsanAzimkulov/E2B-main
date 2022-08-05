@@ -3182,6 +3182,12 @@
   border-radius: 10px;
   text-align: center;
 }
+.packages__table-main tfoot .packages__table-main__order__button:hover {
+  background: #0267AA;
+}
+.packages__table-main tfoot .packages__table-main__order__button:active {
+  background: #004D81;
+}
 @media (min-width: 425px) {
   .packages__table-main thead tr th:last-child {
     padding-right: 0px;
