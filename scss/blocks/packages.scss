@@ -150,6 +150,7 @@
         }
           p {
             margin-bottom: 0px;
+            white-space: nowrap;
           }
           @include price-block;
           &__discount{
