@@ -535,12 +535,11 @@
 .side-nav {
   display: none;
   z-index: 100;
+  mix-blend-mode: difference;
+  filter: invert(1);
   position: fixed;
   top: 288px;
   left: 85px;
-}
-.side-nav--invert {
-  filter: invert(1);
 }
 @media (min-width: 1920px) {
   .side-nav {

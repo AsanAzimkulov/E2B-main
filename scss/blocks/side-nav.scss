@@ -1,9 +1,8 @@
 .side-nav {
   display: none;
   z-index: 100;
-  &--invert{
-    filter: invert(1);
-  }
+  mix-blend-mode: difference;
+  filter: invert(1);
   @media(min-width: 1920px){
     display: block;
   }
