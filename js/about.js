@@ -40,6 +40,15 @@ $(document).ready(function () {
     new ChiefSlider('.video .slider');
   }
 
+  // Новый слайдер для top-services
+
+  if (window.matchMedia("(max-width: 1199.5px)").matches) {
+    if ($('.top-services .slider__item').length > 1) {
+      new ChiefSlider('.top-services .slider');
+    }
+  }
+
+
 
 
   // if ($(document).width() < 769) {
