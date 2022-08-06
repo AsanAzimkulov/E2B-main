@@ -4079,4 +4079,203 @@
     width: 107px;
   }
 }
+
+.feedback-form {
+  margin-top: 80px;
+  margin-bottom: 80px;
+  background: linear-gradient(97.92deg, #1F3050 0%, #14326B 100%);
+  color: white;
+}
+@media (min-width: 768px) {
+  .feedback-form {
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+}
+@media (min-width: 1920px) {
+  .feedback-form {
+    margin-top: 120px;
+    margin-bottom: 120px;
+  }
+}
+.feedback-form--last-section {
+  margin-bottom: 0;
+}
+.feedback-form__wrapper {
+  padding-top: 9px;
+  padding-bottom: 40px;
+}
+.feedback-form__image {
+  width: 100%;
+}
+.feedback-form__image__wrapper {
+  margin-bottom: 25px;
+}
+.feedback-form__title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom: 25px;
+}
+.feedback-form__title__marked {
+  color: #FEB62A;
+}
+.feedback-form__form__input {
+  color: #2D2D2D;
+  margin-bottom: 15px;
+  padding: 15px 32px;
+  width: 100%;
+  background-color: white;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 110.4%;
+  border: 1px solid #E3E3E3;
+  border-radius: 15px;
+}
+.feedback-form__form__input::placeholder {
+  color: #828282;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 110.4%;
+}
+.feedback-form__form__input:focus {
+  outline: 2px solid #FEB62A;
+  outline-offset: -1px;
+}
+.feedback-form__form__submit-button {
+  margin-top: 20px;
+  text-decoration: none;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 110.4%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(91.01deg, #FF981E 0%, #FEB62A 100%);
+  border-radius: 15px;
+  width: 100%;
+  padding: 15px 0;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 20px 0;
+  margin-bottom: 10px;
+}
+.feedback-form__form__submit-button:hover {
+  background: linear-gradient(91.01deg, #E08010 0%, #FFAF15 100%);
+  color: white;
+}
+.feedback-form__form__submit-button:active {
+  background: linear-gradient(91.01deg, #DA7805 0%, #DD9200 100%);
+  color: white;
+}
+.feedback-form__form__privacy-policy {
+  color: white;
+  display: block;
+  text-align: center;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 110.4%;
+  text-decoration: none;
+}
+@media (min-width: 768px) {
+  .feedback-form__wrapper {
+    padding-top: 27px;
+    padding-bottom: 45px;
+  }
+  .feedback-form__image {
+    width: 88.7%;
+  }
+  .feedback-form__image__wrapper {
+    margin-bottom: 20.5px;
+  }
+  .feedback-form__title {
+    font-size: 36px;
+    line-height: 41px;
+    margin-bottom: 40px;
+    width: 64.68%;
+  }
+  .feedback-form__form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .feedback-form__form__input {
+    margin-bottom: 30px;
+    width: 47.88%;
+  }
+  .feedback-form__form__submit-button {
+    margin-top: 0;
+    padding: 18px 0;
+    width: 47.88%;
+  }
+  .feedback-form__form__privacy-policy {
+    width: 47.88%;
+    text-align: left;
+  }
+}
+@media (min-width: 1200px) {
+  .feedback-form__title {
+    width: 86%;
+  }
+  .feedback-form__wrapper {
+    padding-top: 40px;
+    padding-bottom: 36px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .feedback-form__image {
+    position: absolute;
+    transform: scale(1.25);
+    top: -18px;
+  }
+  .feedback-form__image__wrapper {
+    width: 50%;
+    margin: 0;
+    position: relative;
+  }
+  .feedback-form__content-wrapper {
+    width: 50%;
+  }
+  .feedback-form__form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .feedback-form__form__input {
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 16px 29px;
+    font-size: 18px;
+    line-height: 110.4%;
+  }
+  .feedback-form__form__input::placeholder {
+    font-size: 18px;
+    line-height: 110.4%;
+  }
+  .feedback-form__form__input:last-of-type {
+    margin-bottom: 40px;
+  }
+  .feedback-form__form__submit-button {
+    margin-top: 0;
+    padding: 18px 0;
+    width: 53.19%;
+    margin-bottom: 0;
+  }
+  .feedback-form__form__privacy-policy {
+    width: 44.04%;
+    font-size: 10px;
+    line-height: 110.4%;
+    display: flex;
+    align-items: center;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1399.5px) {
+  .feedback-form__image {
+    transform: scale(1.31);
+    top: -9px;
+  }
+}
 /*# sourceMappingURL=maps/style.css.map */
