@@ -538,8 +538,8 @@
   mix-blend-mode: difference;
   filter: invert(1);
   position: fixed;
-  top: 288px;
-  left: 85px;
+  top: 188px;
+  left: 30px;
 }
 @media (min-width: 1920px) {
   .side-nav {
@@ -568,11 +568,29 @@
   font-size: 16px;
   line-height: 20px;
   text-decoration: none;
+  color: #000000;
+}
+.side-nav__list__item-link--active {
+  color: #0071BC;
+  border-bottom: 1px solid #0071BC;
+}
+.side-nav__list__item-link--active:hover {
+  border-bottom: 1px solid #FF6871;
 }
 .side-nav__list__item:last-child {
   margin-bottom: 0;
 }
 .side-nav__list__item--active {
+  color: #0071BC;
+  border-bottom: 1px solid #0071BC;
+}
+.side-nav__list__item--active:hover {
+  border-bottom: 1px solid #FF6871;
+}
+.side-nav__list__item--active .side-nav__list__item-link {
+  color: #0071BC;
+}
+.side-nav__list__item--active .side-nav__list__item-link--active {
   color: #0071BC;
   border-bottom: 1px solid #0071BC;
 }

@@ -58,21 +58,6 @@ $(document).ready(function () {
 
 
 
-
-  // if ($(document).width() < 769) {
-  // 	$('.sliders .slider ').on('transition-start', function (e) {
-  // 		if ($(this).find('.slider__item_active').length == 3) {
-  // 			let itemCount = $(this).find('.slider__item').length;
-  // 			if (($(this).find('.slider__item').eq(itemCount - 1).hasClass('slider__item_active') && $(this).find('.slider__item').eq(itemCount - 2).hasClass('slider__item_active') && $(this).find('.slider__item').eq(itemCount - 3).hasClass('slider__item_active')) || $(this).find('.slider__item').eq(0).hasClass('slider__item_active')) {
-  // 				$(this).find('.slider__item').eq(0).css('visibility', 'visible')
-  // 			} else {
-  // 				$(this).find('.slider__item').eq(0).css('visibility', 'hidden')
-  // 			}
-  // 		}
-  // 	})
-  // }
-
-
 });
 // Меню
 $(window).scroll(function (event) {

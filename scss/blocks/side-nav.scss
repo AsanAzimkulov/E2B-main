@@ -7,8 +7,8 @@
     display: block;
   }
   position: fixed;
-  top: 288px;
-  left: 85px;
+  top: 188px;
+  left: 30px;
   &__nav {
     position: relative;
     border-radius: 20px;
@@ -34,6 +34,13 @@
         line-height: 20px;
         text-decoration: none;
         color: #000000;
+        &--active{
+          color: $list-active;
+          border-bottom: 1px solid $list-active;
+          &:hover{
+            border-bottom: 1px solid #FF6871;
+          }
+        }
       }
       &:last-child{
         margin-bottom: 0;
@@ -42,10 +49,18 @@
       &--active{
         color: $list-active;
         border-bottom: 1px solid $list-active;
+        &:hover{
+          border-bottom: 1px solid #FF6871;
+        }
         .side-nav__list__item-link{
+          &--active{
+            color: $list-active;
+            border-bottom: 1px solid $list-active;
+          }
           &:hover{
             color: $list-active;
           }
+          color: $list-active;
         }
 
       }
