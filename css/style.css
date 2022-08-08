@@ -49,17 +49,18 @@
     text-align: center;
   }
 }
-.promo .btn__main {
-  background: linear-gradient(91.18deg, #1C89D1 0.05%, #2FA0EB 99.98%);
-}
-.promo .btn__main:hover {
-  background: linear-gradient(91.18deg, #0F72B3 0.05%, #1D8BD3 99.98%);
-}
-.promo .btn__main:active {
-  background: linear-gradient(91.18deg, #0F659D 0.05%, #0373BD 99.98%);
-}
 .promo .btn-price__block div span {
   white-space: nowrap;
+}
+.promo .btn-price__block .btn__main {
+  background: linear-gradient(91.18deg, #1C89D1 0.05%, #2FA0EB 99.98%);
+  white-space: nowrap !important;
+}
+.promo .btn-price__block .btn__main:hover {
+  background: linear-gradient(91.18deg, #0F72B3 0.05%, #1D8BD3 99.98%);
+}
+.promo .btn-price__block .btn__main:active {
+  background: linear-gradient(91.18deg, #0F659D 0.05%, #0373BD 99.98%);
 }
 .promo--invert {
   padding-bottom: 80px;
