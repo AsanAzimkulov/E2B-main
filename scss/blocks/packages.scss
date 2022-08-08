@@ -110,7 +110,6 @@
         th{
           height: 20px;
           background: linear-gradient(180deg, #1F3050 0%, #14326B 100%);
-          background-size: 628px -68px;
           background-position-y: -63px;
           background-size: 100% 130px;
           background-repeat: no-repeat;
@@ -478,7 +477,7 @@
                 padding-right: 10px;
               }
               .packages__table-main__price-block__price{
-                white-space: none;
+                white-space: nowrap;
               }
             }
   

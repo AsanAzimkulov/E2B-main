@@ -58,6 +58,7 @@
   }
 
   &__read-more {
+    width: 100%;
     a {
       color: white;
       text-decoration: none;
@@ -134,6 +135,9 @@
     &__down-bar{
       display: flex;
       width: 78.92%;
+      &-wrapper{
+        padding-left: 0px;
+      }
       &__button{
         order: -1;
       }
@@ -177,6 +181,7 @@
       height: 100%;
     }
     &__image{
+      min-height: 300px;
       margin: 0;
       width: 760px;
       height: 60%;

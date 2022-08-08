@@ -1,6 +1,6 @@
 .cases{
+  @include standart-section-spacing;
   overflow: hidden;
-  margin-bottom: 80px;
   &__button {
     @include blue-button;
     white-space: nowrap;
@@ -38,12 +38,8 @@
   }
 
   @media(min-width: 768px){
-    margin-bottom: 87px;
     &__down-bar{
       margin-top: 40px !important;
     }
-  }
-  @media(min-width: 1920px){
-    margin-bottom: 120px;
   }
 }

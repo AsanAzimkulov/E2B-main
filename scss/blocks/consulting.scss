@@ -1,5 +1,5 @@
 .consulting {
-  @include extra-section-spacing(0, 66px, 73px);
+  @include extra-section-spacing(0px, 66px, 73px);
   display: block;
   background: $gr-dark-blue;
   &__image-wrapper{

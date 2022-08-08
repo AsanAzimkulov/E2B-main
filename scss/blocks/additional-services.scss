@@ -41,7 +41,7 @@
       font-size: 15px;
       line-height: 130%;
       @include tick-bullet;
-      &::last-child{
+      &:last-child{
         margin-bottom: 0;
       }
     }
@@ -60,9 +60,6 @@
     &__wrapper{
       padding-top: 30px;
       padding-bottom: 30px;
-    }
-    &__outer-wrapper{
-      max-width: auto;
     }
 
     &__list{

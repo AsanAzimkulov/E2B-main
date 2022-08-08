@@ -39,8 +39,10 @@
   }
 
   @media(min-width: 768px){
-    max-width: auto;
-
+    &__outer-wrapper{
+      padding-left: 0px;
+      padding-right: 0px;
+    }
     &__wrapper{
       @include ver-p(
       15px);

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en" class="page">
+<html lang="ru" class="page">
 
 <head>
   <meta charset="UTF-8">
@@ -749,7 +749,7 @@
           <h2 class="reviews__title reviews__title--mobile">
             Отзывы наших клиентов
           </h2>
-          <img src="./images/Irina.png" alt="Ирина Бондарёва" class="reviews__image">
+          <img src="./images/Irina.png" alt="Изображение автора отзывы" class="reviews__image" width="330">
         </div>
         <div class="container-md reviews__text-wrapper">
           <h3 class="reviews__title reviews__title--tablet">Отзывы наших клиентов</h3>
@@ -795,7 +795,15 @@
               <div class="slider__container">
                 <div class="slider__wrapper">
                   <div class="slider__items">
-                    <div class="slider__item slider__item_active" data-index="0" data-order="0" data-translate="0">
+                    <div class="slider__item slider__item_active" data-index="0" data-order="0" data-translate="0"
+                      data-image-url="./images/nikita-reviews.png" data-title="Lorem ipsum dolor sit amet consectetur."
+                      data-p1="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, laudantium!
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, laudantium!
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, laudantium!" data-p2="Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit." data-p3="Lorem ipsum dolor sit.
+                      Lorem ipsum dolor sit."
+                      data-completed-works="Lorem, ipsum;///Lorem, ipsum dolor;///Lorem, ipsum;///Lorem, ipsum dolor;">
                       <div class="reviewers__block">
                         <div class="reviewers__block__frame">
                           <img src="./images/nikita-reviews.png" alt="Никита Астафьев" class="reviewers__block__image">
@@ -803,7 +811,12 @@
                         <h3 class="reviewers__block__title">Никита Астафьев</h3>
                       </div>
                     </div>
-                    <div class="slider__item slider__item" data-index="1" data-order="1" data-translate="0">
+                    <div class="slider__item slider__item" data-index="1" data-image-url='./images/Irina.png'
+                      data-order="1" data-translate="0" data-title="Отзывы наших клиентов"
+                      data-p1="Проходила обучение по email-маркетингу у Дмитрия и его команды в 2021 году."
+                      data-p2="Хочу выразить особенную благодарность за блок по формированию дизайна шаблонов и смыслового наполнения писем, детальной работе с платформой - в этом мне очень помогла и абсолютно очаровала Лилия 🌺"
+                      data-p3="Кроме того, отдельная благодарность Дмитрию за всестороннюю"
+                      data-completed-works="Обучение Email-маркетингу;///антиспам настройка;///антиспам настройка;///антиспам настройка;">
                       <div class="reviewers__block">
                         <div class="reviewers__block__frame">
                           <img src="./images/Irina-reviews.png" alt="Ирина Бондарёва" class="reviewers__block__image">
@@ -811,7 +824,15 @@
                         <h3 class="reviewers__block__title">Ирина Бондарёва</h3>
                       </div>
                     </div>
-                    <div class="slider__item slider__item" data-index="2" data-order="2" data-translate="0">
+                    <div class="slider__item slider__item" data-index="2" data-order="2" data-translate="0"
+                      data-image-url="./images/nikita-reviews.png"
+                      data-title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, laudantium!"
+                      data-p1="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, laudantium!
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, laudantium!
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, laudantium!" data-p2="Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, laudantium!"
+                      data-p3="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, laudantium!Lorem ipsum dolor sit."
+                      data-completed-works="Lorem, ipsum;///Lorem, ipsum dolor;///Lorem, ipsum;///Lorem, ipsum dolor;">
                       <div class="reviewers__block">
                         <div class="reviewers__block__frame">
                           <img src="./images/nikita-reviews.png" alt="Никита Астафьев" class="reviewers__block__image">
@@ -834,7 +855,7 @@
     <div
       class="reviews__wrapper-image-text reviews__wrapper-image-text reviews__wrapper-image-text--desctop container-md ">
       <div class="container-md reviews__image-wrapper reviews__image-wrapper--desctop">
-        <img src="./images/Irina.png" alt="Ирина Бондарёва" class="reviews__image">
+        <img src="./images/Irina.png" alt="Изображение автора отзывы" width="330" class="reviews__image">
       </div>
   </section>
   <section class="video title__box" id="video">
@@ -1496,9 +1517,10 @@
         <h2 class="feedback-form__title">
           <span class="feedback-form__title__marked">Оставьте заявку</span> и я лично проведу с вами консультацию
         </h2>
-        <form action="POST" class="feedback-form__form">
-          <input type="tel" class="feedback-form__form__input" placeholder="Телефон">
-          <input type="email" class="feedback-form__form__input" placeholder="Почта">
+        <form class="feedback-form__form" method="post" action="#">
+          <input type="tel" name="phone" value="" size="40" class="feedback-form__form__input" placeholder="Телефон"
+            required>
+          <input type="email" class="feedback-form__form__input" placeholder="Почта" required>
           <button class="feedback-form__form__submit-button" type="submit">
             Оставить заявку
           </button>
@@ -1704,55 +1726,7 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.6.12/plyr.min.js?ver=6.0.1"
     id="plyr-js"></script>
   <script src="./bundle/js/main.js"></script>
-  <script>
-    const indicators = document.querySelectorAll('.side-nav__list__item-link');
-    let indicatorsClassSelectors = document.querySelectorAll('.side-nav__list__item');
-    indicatorsClassSelectors = Array.from(indicatorsClassSelectors)
-
-    const resetCurrentActiveIndicators = () => {
-      const activeIndicator = document.querySelector('.side-nav__list__item-link--active');
-      if (activeIndicator) {
-        activeIndicator.classList.remove('side-nav__list__item-link--active');
-      }
-
-    };
-
-    indicators.forEach((indicator) => {
-      indicator.addEventListener('click', function (e) {
-        resetCurrentActiveIndicators();
-        e.target.parentNode.classList.add('side-nav__list__item-link--active');
-      })
-    })
-
-
-    const sections = document.querySelectorAll('section');
-
-    const onSectionLeaveViewport = (section) => {
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              resetCurrentActiveIndicators();
-              const element = entry.target;
-              console.log(element, entry, element.id)
-              const indicator = document.querySelector(`a[href="#${element.id}"`);
-              console.log(indicator)
-              indicator.classList.add('side-nav__list__item-link--active');
-              return;
-            }
-          })
-        },
-        {
-          root: null,
-          rootMargin: '0px',
-          threshold: 0.75
-        }
-      );
-      observer.observe(section);
-    }
-
-    sections.forEach(onSectionLeaveViewport);
-  </script>
+  <script></script>
 </body>
 
 </html>`
