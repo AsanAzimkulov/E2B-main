@@ -135,12 +135,7 @@
 }
 @media (min-width: 1200px) {
   .promo--invert .banner__img {
-    margin-bottom: 45px;
-  }
-}
-@media (min-width: 1920px) {
-  .promo--invert .banner__img {
-    margin-bottom: 45px;
+    margin-bottom: 44px;
   }
 }
 .promo .ul__arrow {
