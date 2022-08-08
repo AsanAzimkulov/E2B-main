@@ -421,7 +421,7 @@
   align-items: center;
   justify-content: center;
   background: linear-gradient(91.18deg, #1C89D1 0.05%, #2FA0EB 99.98%);
-  border-radius: 15px;
+  border-radius: 15px !important;
   width: 100%;
   padding: 15px 0;
   border: none;
@@ -608,7 +608,7 @@
   align-items: center;
   justify-content: center;
   background: linear-gradient(91.18deg, #1C89D1 0.05%, #2FA0EB 99.98%);
-  border-radius: 15px;
+  border-radius: 15px !important;
   width: 100%;
   padding: 15px 0;
   border: none;
@@ -1409,7 +1409,7 @@
   align-items: center;
   justify-content: center;
   background: linear-gradient(91.18deg, #1C89D1 0.05%, #2FA0EB 99.98%);
-  border-radius: 15px;
+  border-radius: 15px !important;
   width: 100%;
   padding: 15px 0;
   border: none;
@@ -1549,7 +1549,7 @@
   align-items: center;
   justify-content: center;
   background: linear-gradient(91.18deg, #1C89D1 0.05%, #2FA0EB 99.98%);
-  border-radius: 15px;
+  border-radius: 15px !important;
   width: 100%;
   padding: 15px 0;
   border: none;
@@ -1804,7 +1804,7 @@
   align-items: center;
   justify-content: center;
   background: linear-gradient(91.18deg, #1C89D1 0.05%, #2FA0EB 99.98%);
-  border-radius: 15px;
+  border-radius: 15px !important;
   width: 100%;
   padding: 15px 0;
   border: none;
@@ -1915,7 +1915,7 @@
     align-items: center;
     justify-content: center;
     background: linear-gradient(91.18deg, #1C89D1 0.05%, #2FA0EB 99.98%);
-    border-radius: 15px;
+    border-radius: 15px !important;
     width: 100%;
     padding: 15px 0;
     border: none;
@@ -2123,7 +2123,7 @@
   align-items: center;
   justify-content: center;
   background: linear-gradient(91.18deg, #1C89D1 0.05%, #2FA0EB 99.98%);
-  border-radius: 15px;
+  border-radius: 15px !important;
   width: 100%;
   padding: 15px 0;
   border: none;
@@ -2303,7 +2303,7 @@
     align-items: center;
     justify-content: center;
     background: linear-gradient(91.18deg, #1C89D1 0.05%, #2FA0EB 99.98%);
-    border-radius: 15px;
+    border-radius: 15px !important;
     width: 100%;
     padding: 15px 0;
     border: none;
@@ -2562,7 +2562,7 @@
     align-items: center;
     justify-content: center;
     background: linear-gradient(91.18deg, #1C89D1 0.05%, #2FA0EB 99.98%);
-    border-radius: 15px;
+    border-radius: 15px !important;
     width: 100%;
     padding: 15px 0;
     border: none;
@@ -3529,7 +3529,7 @@
   align-items: center;
   justify-content: center;
   background: linear-gradient(91.18deg, #1C89D1 0.05%, #2FA0EB 99.98%);
-  border-radius: 15px;
+  border-radius: 15px !important;
   width: 100%;
   padding: 15px 0;
   border: none;
@@ -3849,7 +3849,7 @@
   align-items: center;
   justify-content: center;
   background: linear-gradient(91.01deg, #FF981E 0%, #FEB62A 100%);
-  border-radius: 15px;
+  border-radius: 15px !important;
   width: 100%;
   padding: 15px 0;
   border: none;
