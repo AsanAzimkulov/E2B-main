@@ -202,7 +202,7 @@
 
 @mixin tick-bullet($inverted: false) {
   position: relative;
-  padding-left: 34px;
+  padding-left: 30px;
   &::before{
     display: block;
     position: absolute;
@@ -210,48 +210,16 @@
     top: 6px;
     content: '';
     width:19.09px;
-    height: 18px;
+    height: 14px;
     background: transparent;
     @if $inverted{
       background-image: url('../../images/icons/empty-tick-white.svg') !important;
     } @else {
       background-image: url('../../images/icons/empty-tick-black.svg') !important;
     }
+    background-position-y: center;
     background-size: 19.09px 18px;
     background-repeat: no-repeat;
-  }
-
-    @media(min-width: 768px){
-      padding-left: 39px;  
-      position: relative;      
-      &::before{
-        display: block;
-        position: absolute;
-        left: 6px;
-        top: 0px;
-        content: '';
-        width:24.09px;
-        height: 23px;
-        background: transparent;
-        background-size: 24.09px 23px;
-        background-repeat: no-repeat;
-    }
-  }
-
-  @media(min-width: 1024px){
-    padding-left: 44px;
-    &::before{
-      display: block;
-      position: absolute;
-      left: 0px;
-      top: -3px;
-      content: '';
-      width:29.09px;
-      height: 28px;
-      background: transparent;
-      background-size: 29.09px 28px;
-      background-repeat: no-repeat;
-    }
   }
 }
 

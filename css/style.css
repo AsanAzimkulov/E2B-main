@@ -110,7 +110,7 @@
 }
 .promo--invert .ul__arrow li {
   position: relative;
-  padding-left: 34px;
+  padding-left: 30px;
 }
 .promo--invert .ul__arrow li::before {
   display: block;
@@ -119,46 +119,12 @@
   top: 6px;
   content: "";
   width: 19.09px;
-  height: 18px;
+  height: 14px;
   background: transparent;
   background-image: url("../../images/icons/empty-tick-white.svg") !important;
+  background-position-y: center;
   background-size: 19.09px 18px;
   background-repeat: no-repeat;
-}
-@media (min-width: 768px) {
-  .promo--invert .ul__arrow li {
-    padding-left: 39px;
-    position: relative;
-  }
-  .promo--invert .ul__arrow li::before {
-    display: block;
-    position: absolute;
-    left: 6px;
-    top: 0px;
-    content: "";
-    width: 24.09px;
-    height: 23px;
-    background: transparent;
-    background-size: 24.09px 23px;
-    background-repeat: no-repeat;
-  }
-}
-@media (min-width: 1024px) {
-  .promo--invert .ul__arrow li {
-    padding-left: 44px;
-  }
-  .promo--invert .ul__arrow li::before {
-    display: block;
-    position: absolute;
-    left: 0px;
-    top: -3px;
-    content: "";
-    width: 29.09px;
-    height: 28px;
-    background: transparent;
-    background-size: 29.09px 28px;
-    background-repeat: no-repeat;
-  }
 }
 .promo--invert .banner__img {
   margin-bottom: 27px;
@@ -256,7 +222,7 @@
     width: 77px;
     height: 77px;
   }
-  .advantages__list__item__desctiption {
+  .advantages__list__item__description {
     font-size: 16px;
     line-height: 130%;
   }
@@ -273,6 +239,10 @@
   .advantages__list__item:last-child {
     margin-bottom: 0;
     margin: 0;
+  }
+  .advantages__list__item__image {
+    width: 100px;
+    height: 100px;
   }
   .advantages__list__item:nth-child(1), .advantages__list__item:nth-child(3n), .advantages__list__item:nth-child(4) {
     margin-bottom: 30px;
@@ -396,7 +366,7 @@
   font-size: 15px;
   line-height: 130%;
   position: relative;
-  padding-left: 34px;
+  padding-left: 30px;
 }
 .additional-services__list__item::before {
   display: block;
@@ -405,46 +375,12 @@
   top: 6px;
   content: "";
   width: 19.09px;
-  height: 18px;
+  height: 14px;
   background: transparent;
   background-image: url("../../images/icons/empty-tick-black.svg") !important;
+  background-position-y: center;
   background-size: 19.09px 18px;
   background-repeat: no-repeat;
-}
-@media (min-width: 768px) {
-  .additional-services__list__item {
-    padding-left: 39px;
-    position: relative;
-  }
-  .additional-services__list__item::before {
-    display: block;
-    position: absolute;
-    left: 6px;
-    top: 0px;
-    content: "";
-    width: 24.09px;
-    height: 23px;
-    background: transparent;
-    background-size: 24.09px 23px;
-    background-repeat: no-repeat;
-  }
-}
-@media (min-width: 1024px) {
-  .additional-services__list__item {
-    padding-left: 44px;
-  }
-  .additional-services__list__item::before {
-    display: block;
-    position: absolute;
-    left: 0px;
-    top: -3px;
-    content: "";
-    width: 29.09px;
-    height: 28px;
-    background: transparent;
-    background-size: 29.09px 28px;
-    background-repeat: no-repeat;
-  }
 }
 .additional-services__list__item::last-child {
   margin-bottom: 0;
