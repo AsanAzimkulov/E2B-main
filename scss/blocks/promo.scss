@@ -10,6 +10,7 @@
   }
   .btn__main {
     @include blue-button-color;
+    white-space: nowrap;
   }
   .btn-price__block{
     div{
