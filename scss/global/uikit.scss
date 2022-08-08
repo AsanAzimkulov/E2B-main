@@ -29,6 +29,27 @@
   @include button(linear-gradient(91.18deg, #1C89D1 0.05%, #2FA0EB 99.98%), white, 15px,linear-gradient(91.18deg, #0F72B3 0.05%, #1D8BD3 99.98%),linear-gradient(91.18deg, #0F659D 0.05%, #0373BD 99.98%));
 }
 
+@mixin blue-button-color{
+  background: linear-gradient(91.18deg, #1C89D1 0.05%, #2FA0EB 99.98%);
+  &:hover{
+    background: linear-gradient(91.18deg, #0F72B3 0.05%, #1D8BD3 99.98%);
+  }
+   
+  &:active{
+    background: linear-gradient(91.18deg, #0F659D 0.05%, #0373BD 99.98%);
+  }
+}
+
+@mixin orange-button-color{
+  background: linear-gradient(91.01deg, #FF981E 0%, #FEB62A 100%);
+  &:hover{
+    background: linear-gradient(91.01deg, #E08010 0%, #FFAF15 100%);
+  }
+  &:active{
+    background: linear-gradient(91.01deg, #DA7805 0%, #DD9200 100%);
+  }
+}
+
 @mixin orange-button{
   @include button(linear-gradient(91.01deg, #FF981E 0%, #FEB62A 100%), white, 15px, linear-gradient(91.01deg, #E08010 0%, #FFAF15 100%), linear-gradient(91.01deg, #DA7805 0%, #DD9200 100%));
 }

@@ -2,7 +2,7 @@
   color: $black;
 
   &--upward-shift{
-    margin-top: -128px;
+    margin-top: -97px;
   }
 
   &__wrapper{
@@ -73,9 +73,9 @@
     }
   }
 
-  @media(min-width: 1920px){
+  @media(min-width: 991px){
     &--upward-shift{
-      margin-top: -191px;
+      margin-top: -145px;
     }
   }
 }

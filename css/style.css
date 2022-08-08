@@ -40,256 +40,79 @@
   overflow: hidden;
 }
 
-.promo {
-  margin-top: 20px;
-  margin-bottom: 75px;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 130%;
-}
-@media (min-width: 768px) {
-  .promo {
-    margin-bottom: 100px;
-  }
-}
-@media (min-width: 1920px) {
-  .promo {
-    margin-bottom: 120px;
-    margin-top: 0px;
-  }
-}
-.promo__wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-}
-.promo__image {
-  margin: 20px 0;
-  width: 100%;
-}
-@media (min-width: 768px) {
-  .promo__image {
-    width: 44.35%;
-    margin: 0;
-  }
-}
-.promo__text-wrapper {
-  margin-bottom: 24px;
-}
-@media (min-width: 768px) {
-  .promo__text-wrapper {
-    width: 55%;
-    order: -1;
-    margin-bottom: 50px;
-  }
-}
-@media (min-width: 1000px) {
-  .promo__text-wrapper {
-    margin-bottom: auto;
-  }
-}
-@media (min-width: 1920px) {
-  .promo__text-wrapper {
-    width: 40.34%;
-    margin-top: 20px;
-  }
-}
-.promo__big-title {
-  width: 100%;
-  display: none;
-}
-@media (min-width: 768px) {
-  .promo__big-title {
-    display: block;
-    margin-bottom: 30px;
-  }
-}
-.promo__big-title--mobile {
-  display: none;
-}
 @media (max-width: 767.5px) {
-  .promo__big-title--mobile {
-    display: block;
+  .promo .btn-price__block {
+    width: 100%;
+  }
+  .promo .btn-price__block .btn__main {
+    width: 100% !important;
+    text-align: center;
   }
 }
-.promo__sub-title {
-  color: #000000;
-  font-weight: 500;
-  margin-bottom: 15px;
-  font-weight: 500;
-  font-size: 15px;
-  line-height: 130%;
-}
-@media (min-width: 768px) {
-  .promo__sub-title {
-    font-size: 16px;
-  }
-}
-@media (min-width: 1000px) {
-  .promo__sub-title {
-    margin-bottom: 20px;
-  }
-}
-@media (min-width: 1200px) and (max-width: 1919.5px) {
-  .promo__sub-title {
-    margin-top: 40px;
-    font-size: 17px;
-  }
-}
-@media (min-width: 1920px) {
-  .promo__sub-title {
-    font-size: 18px;
-    margin-bottom: 20px;
-  }
-}
-.promo__advantages-list {
-  color: #2D2D2D;
-  list-style-type: none;
-  padding: 0;
-}
-@media (min-width: 600px) {
-  .promo__advantages-list {
-    font-size: 16px;
-  }
-}
-@media (min-width: 1228px) and (max-width: 1920px) {
-  .promo__advantages-list {
-    font-size: 17px;
-  }
-}
-@media (min-width: 1000px) {
-  .promo__advantages-list {
-    margin-bottom: 4%;
-  }
-}
-@media (min-width: 1228px) and (max-width: 1920px) {
-  .promo__advantages-list {
-    font-size: 19px;
-  }
-}
-.promo__advantages-list__item {
-  padding-left: 17px;
-  margin-bottom: 15px;
-  position: relative;
-}
-.promo__advantages-list__item:before {
-  display: block;
-  position: absolute;
-  left: 0px;
-  top: 6px;
-  content: "";
-  width: 7px;
-  height: 7px;
-  background: #0071BC;
-  border-radius: 50%;
-}
-.promo__advantages-list__item:last-child {
-  margin-bottom: 0;
-}
-@media (min-width: 1000px) {
-  .promo__advantages-list__item {
-    margin-bottom: 3%;
-  }
-}
-@media (min-width: 1920px) {
-  .promo__advantages-list__item {
-    margin-bottom: 15px;
-    font-size: 18px;
-  }
-}
-.promo__down-bar {
-  width: 100%;
-}
-@media (min-width: 768px) {
-  .promo__down-bar {
-    display: flex;
-    width: 68.92%;
-  }
-}
-@media (min-width: 1920px) {
-  .promo__down-bar {
-    width: 41.7%;
-    margin-top: 0;
-  }
-}
-.promo__price-block {
-  margin-left: 7%;
-  margin-bottom: 10px;
-}
-@media (min-width: 600px) {
-  .promo__price-block {
-    margin-bottom: 20px;
-  }
-}
-@media (min-width: 768px) {
-  .promo__price-block {
-    min-width: 160px;
-    margin-bottom: 0;
-  }
-}
-.promo__price-block__discount {
-  color: #838383;
-  font-size: 16px;
-  line-height: 110.4%;
-  text-decoration-line: line-through;
-  margin-bottom: 0;
-}
-.promo__price-block__price {
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 22px;
-  color: #2D2D2D;
-  margin-bottom: 0;
-}
-@media (min-width: 768px) {
-  .promo__price-block__price {
-    font-size: 25px;
-    line-height: 30px;
-  }
-}
-.promo__button {
-  text-decoration: none;
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 110.4%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.promo .btn__main {
   background: linear-gradient(91.18deg, #1C89D1 0.05%, #2FA0EB 99.98%);
-  border-radius: 15px;
-  width: 100%;
-  padding: 15px 0;
-  border: none;
-  color: white;
-  cursor: pointer;
-  padding: 15px 0;
 }
-.promo__button:hover {
+.promo .btn__main:hover {
   background: linear-gradient(91.18deg, #0F72B3 0.05%, #1D8BD3 99.98%);
-  color: white;
 }
-.promo__button:active {
+.promo .btn__main:active {
   background: linear-gradient(91.18deg, #0F659D 0.05%, #0373BD 99.98%);
-  color: white;
 }
-@media (min-width: 768px) {
-  .promo__button {
-    width: 64.78%;
-    padding: 20px 0;
-    order: -1;
-  }
+.promo .btn-price__block div span {
+  white-space: nowrap;
 }
 .promo--invert {
+  padding-bottom: 80px;
+  padding-top: 30px;
   background: linear-gradient(97.92deg, #1F3050 0%, #14326B 100%);
+  color: white;
 }
-.promo--invert .promo__advantages-list__item {
+@media (max-width: 767.5px) {
+  .promo--invert .btn-price__block {
+    width: 100%;
+  }
+  .promo--invert .btn-price__block .btn__main {
+    width: 100% !important;
+    text-align: center;
+  }
+}
+.promo--invert h2 {
+  margin-bottom: 20px;
+}
+.promo--invert .banner__img {
+  display: none;
+}
+@media (min-width: 1200px) {
+  .promo--invert {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  .promo--invert .banner__img {
+    display: block;
+  }
+}
+.promo--invert .btn-price__block div span:last-child {
+  color: white;
+  white-space: nowrap;
+}
+.promo--invert .btn-price__block .btn__main {
+  background: linear-gradient(91.01deg, #FF981E 0%, #FEB62A 100%);
+  white-space: nowrap;
+}
+.promo--invert .btn-price__block .btn__main:hover {
+  background: linear-gradient(91.01deg, #E08010 0%, #FFAF15 100%);
+}
+.promo--invert .btn-price__block .btn__main:active {
+  background: linear-gradient(91.01deg, #DA7805 0%, #DD9200 100%);
+}
+.promo--invert .ul__arrow {
+  margin-bottom: 30px;
+}
+.promo--invert .ul__arrow li {
   position: relative;
   padding-left: 34px;
-  color: #FFFFFF;
 }
-.promo--invert .promo__advantages-list__item::before {
+.promo--invert .ul__arrow li::before {
   display: block;
   position: absolute;
   left: 0px;
@@ -303,11 +126,11 @@
   background-repeat: no-repeat;
 }
 @media (min-width: 768px) {
-  .promo--invert .promo__advantages-list__item {
+  .promo--invert .ul__arrow li {
     padding-left: 39px;
     position: relative;
   }
-  .promo--invert .promo__advantages-list__item::before {
+  .promo--invert .ul__arrow li::before {
     display: block;
     position: absolute;
     left: 6px;
@@ -321,10 +144,10 @@
   }
 }
 @media (min-width: 1024px) {
-  .promo--invert .promo__advantages-list__item {
+  .promo--invert .ul__arrow li {
     padding-left: 44px;
   }
-  .promo--invert .promo__advantages-list__item::before {
+  .promo--invert .ul__arrow li::before {
     display: block;
     position: absolute;
     left: 0px;
@@ -337,113 +160,37 @@
     background-repeat: no-repeat;
   }
 }
-.promo--invert .promo__big-title {
-  color: #FFFFFF;
+.promo--invert .banner__img {
+  margin-bottom: 27px;
 }
-.promo--invert .promo__big-title--mobile {
-  color: #FFFFFF;
+@media (min-width: 768px) {
+  .promo--invert .banner__img {
+    margin-bottom: 27px;
+  }
+}
+@media (min-width: 1200px) {
+  .promo--invert .banner__img {
+    margin-bottom: 45px;
+  }
+}
+@media (min-width: 1920px) {
+  .promo--invert .banner__img {
+    margin-bottom: 45px;
+  }
+}
+.promo .ul__arrow {
   margin-bottom: 30px;
 }
-.promo--invert .promo__image {
-  display: none;
-}
-@media (min-width: 1920px) {
-  .promo--invert .promo__image {
-    display: block;
-  }
-}
-.promo--invert .promo__sub-title {
-  color: #FFFFFF;
-}
-.promo--invert .promo__image {
-  margin-left: auto !important;
-}
-.promo--invert .promo__wrapper {
-  padding-top: 30px;
-  padding-bottom: 83px;
-}
-@media (min-width: 768px) {
-  .promo--invert .promo__wrapper {
-    padding-top: 40px;
-    padding-bottom: 80px;
-  }
-}
-@media (min-width: 1920px) {
-  .promo--invert .promo__wrapper {
-    padding-top: 50px;
-    padding-bottom: 70px;
-  }
-}
-.promo--invert .promo__price-block__price {
-  color: #FFFFFF;
-}
-.promo--invert .promo__button {
-  text-decoration: none;
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 110.4%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(91.01deg, #FF981E 0%, #FEB62A 100%);
-  border-radius: 15px;
-  width: 100%;
-  padding: 15px 0;
-  border: none;
-  color: white;
-  cursor: pointer;
-  padding: 15px 0;
-}
-.promo--invert .promo__button:hover {
-  background: linear-gradient(91.01deg, #E08010 0%, #FFAF15 100%);
-  color: white;
-}
-.promo--invert .promo__button:active {
-  background: linear-gradient(91.01deg, #DA7805 0%, #DD9200 100%);
-  color: white;
-}
-@media (min-width: 768px) {
-  .promo--invert .promo__button {
-    padding: 20px 0;
-  }
-}
-@media (min-width: 768px) {
-  .promo--invert .promo__advantages-list {
-    margin-bottom: 40px;
-  }
-}
-@media (min-width: 1024px) {
-  .promo--invert .promo__advantages-list {
-    margin-bottom: 40px;
-  }
-}
-.promo--invert .promo__down-bar {
-  margin-top: 0;
-}
-@media (min-width: 1920px) {
-  .promo--invert .promo {
-    padding-top: 20px;
-  }
-  .promo--invert .promo__text-wrapper {
-    margin-bottom: 0;
-    padding-bottom: 8.4%;
-  }
-  .promo--invert .promo__wrapper {
-    padding-top: 20px;
-  }
-  .promo--invert .promo__image {
-    margin-top: -44px;
-    margin-left: 84px !important;
-    width: 50%;
-  }
-  .promo--invert .promo__advantages-list {
-    margin-bottom: 0px;
-  }
-  .promo--invert .promo__down-bar {
-    margin-top: -8.4%;
-  }
+.promo .ul__arrow li::before {
+  display: block;
+  position: absolute;
+  left: 0px;
+  top: 6px;
+  content: "";
+  width: 7px;
+  height: 7px;
+  background: #0071BC;
+  border-radius: 50%;
 }
 
 .advantages {
@@ -613,7 +360,7 @@
   color: #2D2D2D;
 }
 .additional-services--upward-shift {
-  margin-top: -128px;
+  margin-top: -97px;
 }
 .additional-services__wrapper {
   background: #FFFFFF;
@@ -723,9 +470,9 @@
     width: 47%;
   }
 }
-@media (min-width: 1920px) {
+@media (min-width: 991px) {
   .additional-services--upward-shift {
-    margin-top: -191px;
+    margin-top: -145px;
   }
 }
 
