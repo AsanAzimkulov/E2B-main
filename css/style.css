@@ -116,7 +116,6 @@
   display: block;
   position: absolute;
   left: 0px;
-  top: 6px;
   content: "";
   width: 19.09px;
   height: 14px;
@@ -193,7 +192,7 @@
   color: #2D2D2D;
   font-weight: 400;
   font-size: 15px;
-  line-height: 130%;
+  line-height: 19.5px;
   margin: 0;
 }
 @media (min-width: 768px) {
@@ -224,7 +223,7 @@
   }
   .advantages__list__item__description {
     font-size: 16px;
-    line-height: 130%;
+    line-height: 20.8px;
   }
 }
 @media (min-width: 1920px) {
@@ -372,7 +371,6 @@
   display: block;
   position: absolute;
   left: 0px;
-  top: 6px;
   content: "";
   width: 19.09px;
   height: 14px;
