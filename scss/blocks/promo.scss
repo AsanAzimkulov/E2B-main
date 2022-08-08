@@ -8,16 +8,17 @@
       }
     }
   }
-  .btn__main {
-    @include blue-button-color;
-    white-space: nowrap !important;
-  }
+
 
   .btn-price__block{
     div{
       span{
         white-space: nowrap;
       }
+    }
+    .btn__main {
+      @include blue-button-color;
+      white-space: nowrap !important;
     }
   }
 
