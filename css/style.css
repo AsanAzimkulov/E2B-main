@@ -47,7 +47,6 @@
   .promo .btn-price__block .btn__main {
     width: 100% !important;
     text-align: center;
-    border-radius: 15px;
   }
 }
 .promo .btn-price__block div span {
@@ -56,6 +55,7 @@
 .promo .btn-price__block .btn__main {
   background: linear-gradient(91.18deg, #1C89D1 0.05%, #2FA0EB 99.98%);
   white-space: nowrap !important;
+  border-radius: 15px;
 }
 .promo .btn-price__block .btn__main:hover {
   background: linear-gradient(91.18deg, #0F72B3 0.05%, #1D8BD3 99.98%);

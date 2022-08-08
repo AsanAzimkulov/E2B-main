@@ -5,7 +5,6 @@
       .btn__main{
         width: 100% !important;
         text-align: center;
-        border-radius: 15px;
       }
     }
   }
@@ -21,6 +20,7 @@
     .btn__main {
       @include blue-button-color;
       white-space: nowrap !important;
+      border-radius: 15px;
     }
   }
 
