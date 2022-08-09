@@ -308,17 +308,21 @@ let mb;
 const imageAligning = () => {
   if (window.matchMedia('(min-width: 1920px)').matches) {
     const img = document.querySelectorAll('.reviews__image')[1]
-    img.style.marginBottom = '';
-    img.style.paddingTop = '';
+    img.style.marginBottom = '0px';
+    img.style.paddingTop = '0px';
     if (img.height < 736) {
       const diff = (736 - img.height);
       img.style.marginBottom = diff + 'px'
       img.style.paddingTop = diff + 1 + 'px'
-      mb = document.querySelector('.reviews').style.marginBottom;
-      document.querySelector('.reviews').style.marginBottom = '-' + (diff - 30) + 'px';
+      // mb = document.querySelector('.reviews').style.marginBottom;
+      // document.querySelector('.reviews').style.marginBottom = '-' + (diff - 30) + 'px';
     } else {
-      document.querySelector('.reviews').style.marginBottom = mb;
+      // document.querySelector('.reviews').style.marginBottom = mb;
     }
+    const section = document.querySelector('.reviews');
+    const sectionWrapper = document.querySelector('.reviews__wrapper');
+    section.style.height = document.defaultView.getComputedStyle(sectionWrapper).height;
+    section.style.overflow = 'hidden';
   }
 }
 let previousSlide;
