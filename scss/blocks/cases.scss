@@ -1,6 +1,5 @@
 .cases{
   @include standart-section-spacing;
-  overflow: hidden;
   &__button {
     @include blue-button;
     white-space: nowrap;

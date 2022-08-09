@@ -303,21 +303,29 @@ reviews.forEach((review) => {
   });
 });
 
+let mb;
+
 const imageAligning = () => {
   if (window.matchMedia('(min-width: 1920px)').matches) {
     const img = document.querySelectorAll('.reviews__image')[1]
-    img.style.marginBottom = null;
-    img.style.paddingTop = null;
-    if (img.height < 740) {
-      const diff = (740 - img.height);
+    img.style.marginBottom = '';
+    img.style.paddingTop = '';
+    if (img.height < 736) {
+      const diff = (736 - img.height);
       img.style.marginBottom = diff + 'px'
       img.style.paddingTop = diff + 1 + 'px'
+      mb = document.querySelector('.reviews').style.marginBottom;
+      document.querySelector('.reviews').style.marginBottom = '-' + (diff - 30) + 'px';
+    } else {
+      document.querySelector('.reviews').style.marginBottom = mb;
     }
   }
 }
+let previousSlide;
 
 const onReviewSlideClick = (index) => {
-  imageAligning();
+  if (previousSlide === index) return;
+  previousSlide = index;
   const reviewData = reviewsData[index];
   reviewHtmlElements.title.forEach(titleEl => {
     titleEl.textContent = reviewData.title;
@@ -343,10 +351,71 @@ const onReviewSlideClick = (index) => {
     reviewHtmlElements.completedWorksList.appendChild(listElement);
   });
 
+  imageAligning();
+
 };
 
 reviews.forEach((reviewSlide, index) => {
   reviewSlide.addEventListener('click', () => onReviewSlideClick(index));
+});
+
+function onOpenModalPreview() {
+  $('html').addClass('no-scroll-y');
+  document.body.classList.add('modal-preview-show');
+  document.body.classList.add('no-scroll-y');
+}
+
+function onCloseModalPreview() {
+  $('html').removeClass('no-scroll-y');
+  document.body.classList.remove('modal-preview-show');
+  document.body.classList.remove('no-scroll-y');
+}
+
+function preventScrollToTop(sectionSelector) {
+  const offset = $(sectionSelector).offset();
+  $('body').animate({
+    scrollTop: offset.top,
+    scrollLeft: offset.left
+  });
+}
+
+document.querySelector('.modal-preview__close').addEventListener('click', onCloseModalPreview);
+document.querySelector('.modal-preview').addEventListener('click', function (e) {
+  if (e.target === this) {
+    onCloseModalPreview();
+  }
+});
+
+const subscribersModalPreview = [];
+
+const createSubscribe = (el, sectionSelector) => {
+  if (el) {
+    subscribersModalPreview.push({
+      element: el,
+      sectionSelector
+    })
+  }
+};
+
+document.querySelectorAll('.cases__down-bar__blue-link').forEach(el => createSubscribe(el, '.cases'));
+
+const serviceSchemeBordered = document.querySelector('.service-scheme__button--bordered');
+const serviceSchemeLink = document.querySelector('.service-scheme__button--link');
+
+createSubscribe(serviceSchemeBordered, '.service-scheme');
+createSubscribe(serviceSchemeLink, '.service-scheme');
+
+
+const exampleFormsLinkInfo = document.querySelectorAll('.example-forms__list__item__down-bar__link--info').forEach(el => createSubscribe(el, '.example-forms'));
+const exampleFormsIconLinkInfo = document.querySelectorAll('.example-forms__list__item__down-bar__price-with-icon__icon-link').forEach(el => createSubscribe(el, '.example-forms'));
+
+const topServicesLinkInfo = document.querySelectorAll('.top-services__item__down-bar__button--link').forEach(el => createSubscribe(el, '.top-services'));
+
+subscribersModalPreview.forEach((sub) => {
+  sub.element.addEventListener('click', function () {
+    onOpenModalPreview();
+    preventScrollToTop(sub.sectionSelector);
+  })
 });
 
 const indicators = document.querySelectorAll('.side-nav__list__item-link');

@@ -202,7 +202,7 @@
 
 @mixin tick-bullet($inverted: false) {
   position: relative;
-  padding-left: 30px;
+  padding-left: 34px;
   &::before{
     display: block;
     position: absolute;
@@ -219,6 +219,50 @@
     background-position-y: center;
     background-size: 19.09px 18px;
     background-repeat: no-repeat;
+  }
+}
+
+@mixin tick-bullet-mobile-smaller($inverted: false) {
+  position: relative;
+  padding-left: 18.84px;
+  &::before{
+    display: block;
+    position: absolute;
+    top: 4px;
+    left: 0px;
+    content: '';
+    width:12px;
+    height: 8.84px;
+    background: transparent;
+    @if $inverted{
+      background-image: url('../../images/icons/empty-tick-white.svg') !important;
+    } @else {
+      background-image: url('../../images/icons/empty-tick-black.svg') !important;
+    }
+    background-position: center;
+    background-size: 12px 8.84px;
+    background-repeat: no-repeat;
+  }
+  @media(min-width: 768px){
+    padding-left: 45px;
+    &::before{
+      display: block;
+      position: absolute;
+      top: 3.5px;
+      left: 0px;
+      content: '';
+      width:19.09px;
+      height: 14px;
+      background: transparent;
+      @if $inverted{
+        background-image: url('../../images/icons/empty-tick-white.svg') !important;
+      } @else {
+        background-image: url('../../images/icons/empty-tick-black.svg') !important;
+      }
+      background-position-y: center;
+      background-size: 19.09px 18px;
+      background-repeat: no-repeat;
+    }
   }
 }
 

@@ -47,3 +47,8 @@
     @include ver-m((120px + $extra3)px);
   }
 }
+
+.no-scroll-y{
+  overflow-y: hidden;
+}
+

@@ -1,0 +1,345 @@
+.modal-preview {
+  box-sizing: padding-box;
+  font-family: 'Montserrat';
+  color: $black;
+  z-index: 20;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  overflow-y: scroll;
+  display: none;
+  &__wrapper {
+    padding: 30px 15px;
+    background: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    /* Тень формы */   
+    box-shadow: 0px 15px 38px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    width: 90.625%;
+    margin-top: 127px;
+    margin-bottom: 88px;
+    height: fit-content;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 15px;
+  }
+
+  &__image-wrapper {
+    border-radius: 30px;
+    box-shadow: $main-shadow;
+    overflow: hidden;
+    margin-bottom: 17px;
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  &__description {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    margin-bottom: 15px;
+    &:last-of-type{
+      margin-bottom: 22px;
+    }
+  }
+
+  &__list {
+    margin-bottom: 22px;
+    padding: 0px;
+    list-style: none;
+    &__item{
+      @include item-spacing(15px);
+      font-size: 15px;
+      line-height: 18px;
+      @include tick-bullet-mobile-smaller;
+    }
+  }
+  &__close{
+    cursor: pointer;
+    &__wrapper{
+      position: relative;
+    }
+    bottom: 3px;
+    right: -16px;
+    position: absolute;  
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    box-shadow: 0px 15px 38px rgba(0, 0, 0, 0.2);
+    border-radius: 10.3448px;
+    &:before{
+      content: '';
+      width: 25.5px;
+      height: 25.25px;
+      background-image: url('../../images/icons/crosshair.svg');
+      background-size: 25.5px 25.25px;
+      position: absolute;
+      margin-top: 7.44px;
+      margin-left: 7.13px;
+    }
+  }
+  &__form {
+    &__input{
+      background: #FFFFFF;
+      outline: 1px solid #E3E3E3;
+      border: none;
+      border-radius: 15px;
+      width: 100%;
+      padding: 12px 15px;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 110.4%;
+      color: $black;
+      margin-bottom: 10px;
+      &::placeholder{
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 110.4%;
+        color: #828282;
+      }
+      &:focus{
+        outline: 2px solid $orange;
+        outline-offset: -1px;
+      }
+    }
+    &__price-block{
+      @include price-block;
+      &__price{
+        font-size: 25px;
+        line-height: 30px;
+      }
+      &__discount{
+        font-size: 16px;
+        line-height: 110.4%;
+      }
+    }
+    &__submit{
+      margin-top: 25px;
+      @include orange-button;
+    }
+    &__privacy-policy{
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 110.4%;
+      color: #5A5A5A;
+      margin-top: 15px;
+      display: block;
+      text-align: center;
+      text-decoration: none;
+    }
+  }
+
+  @media(min-width: 768px){
+    &__wrapper {
+      padding: 30px;
+      box-shadow: -12.2082px 12.2082px 24.4164px rgba(230, 230, 230, 0.2), 12.2082px -12.2082px 24.4164px rgba(230, 230, 230, 0.2), 12.2082px 12.2082px 30.9274px rgba(230, 230, 230, 0.9);
+      border-radius: 30px;    
+      width: 92.1875%;
+      margin-top: 87px;
+      margin-bottom: 175px;
+    }
+    &__text-wrapper{
+      margin: 0 10px;
+    }
+    &__close{
+      bottom: -3px;
+      right: -51px;
+      position: absolute;  
+      width: 58px;
+      height: 58px;
+      background-color: white;
+      box-shadow: 0px 15px 38px rgba(0, 0, 0, 0.2);
+      border-radius: 15px;
+
+      &:before{
+        content: '';
+        width: 37px;
+        height: 36.6px;
+        background-image: url('../../images/icons/crosshair.svg');
+        background-size: 37px 36.6px;
+        position: absolute;
+        margin-top: 10.78px;
+        margin-left: 10.33px;
+      }
+    }
+    &__title {
+      font-size: 30px;
+      line-height: 41px;
+      margin-bottom: 13px;
+    }
+  
+    &__image-wrapper {
+      margin-bottom: 30px;
+    }
+  
+    &__image {
+      width: 100%;
+    }
+  
+    &__description {
+      font-size: 16px;
+      line-height: 20px;
+      margin-bottom: 20px;
+      &:last-of-type{
+        margin-bottom: 30px;
+      }
+    }
+  
+    &__list {
+      &__item{
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+    &__form {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      &__input{
+        background: #FFFFFF;
+        outline: 1px solid #E3E3E3;
+        border: none;
+        border-radius: 15px;
+        width: 47.68%;
+        padding: 15px 32px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 110.4%;
+        margin-bottom: 25px;
+        &::placeholder{
+          font-weight: 400;
+          font-size: 18px;
+        }
+      }
+      &__price-block{
+        width: 47.68%;
+        display: flex;
+        margin: 0;
+        margin-left: 20px;
+        justify-content: left;
+        &__price{
+          order: -1;
+          margin-right: 13px;
+        }
+        &__discount{
+          margin-top: 6px;
+        }
+      }
+      &__submit{
+        margin-top: 0px;
+        @include orange-button;
+        width: 47.68%;
+      }
+      &__privacy-policy{
+        font-size: 10px;
+        line-height: 110.4%;
+        color: #5A5A5A;
+        margin-top: 10px;
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        width: 47.68%;
+        order: 10;
+        margin-left: auto;
+      }
+    }
+  }
+
+  @media(min-width: 1440px){
+    &__wrapper {
+      padding: 56px 50px 43px 50px;
+      width: 57.81%;
+      margin-top: 68px;
+      margin-bottom: 166px;
+    }
+    &__text-wrapper{
+      margin: 0 20px;
+    }
+    &__close{
+      bottom: 6px;
+      right: -58px;
+      position: absolute;  
+      width: 58px;
+      height: 58px;
+      background-color: white;
+      box-shadow: 0px 15px 38px rgba(0, 0, 0, 0.2);
+      border-radius: 15px;
+
+      &:before{
+        content: '';
+        width: 37px;
+        height: 36.6px;
+        background-image: url('../../images/icons/crosshair.svg');
+        background-size: 37px 36.6px;
+        position: absolute;
+        margin-top: 10.78px;
+        margin-left: 10.33px;
+      }
+    }
+    &__title {
+      margin-bottom: 30px;
+    }
+  
+    &__image-wrapper {
+      margin-bottom: 50px;
+    }
+  
+    &__image {
+      width: 100%;
+    }
+  
+    &__description {
+      &:last-of-type{
+        margin-bottom: 0px;
+      }
+    }
+  
+    &__list {
+      margin-bottom: 20px ;
+    }
+    &__form {
+      margin-left: 20px;
+      margin-right: 20px;
+      margin-top: 130px;
+      &__input{
+        width: 43.14%;
+      }
+      &__price-block{
+        width: 43.14%;  
+        &__discount{
+          margin-top: 6px;
+        }
+      }
+      &__submit{
+        margin-top: 0px;
+        @include orange-button;
+        width: 43.14%;
+      }
+      &__privacy-policy{
+        font-size: 10px;
+        line-height: 110.4%;
+        color: #5A5A5A;
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        width: 43.14%;
+        order: 10;
+        margin-left: auto;
+      }
+    }
+  }
+}
+
+.modal-preview-show .modal-preview{
+  display: flex;
+}

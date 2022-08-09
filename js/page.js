@@ -88,21 +88,29 @@ reviews.forEach((review) => {
   });
 });
 
+let mb;
+
 const imageAligning = () => {
   if (window.matchMedia('(min-width: 1920px)').matches) {
     const img = document.querySelectorAll('.reviews__image')[1]
-    img.style.marginBottom = null;
-    img.style.paddingTop = null;
-    if (img.height < 740) {
-      const diff = (740 - img.height);
+    img.style.marginBottom = '';
+    img.style.paddingTop = '';
+    if (img.height < 736) {
+      const diff = (736 - img.height);
       img.style.marginBottom = diff + 'px'
       img.style.paddingTop = diff + 1 + 'px'
+      mb = document.querySelector('.reviews').style.marginBottom;
+      document.querySelector('.reviews').style.marginBottom = '-' + (diff - 30) + 'px';
+    } else {
+      document.querySelector('.reviews').style.marginBottom = mb;
     }
   }
 }
+let previousSlide;
 
 const onReviewSlideClick = (index) => {
-  imageAligning();
+  if (previousSlide === index) return;
+  previousSlide = index;
   const reviewData = reviewsData[index];
   reviewHtmlElements.title.forEach(titleEl => {
     titleEl.textContent = reviewData.title;
@@ -127,6 +135,8 @@ const onReviewSlideClick = (index) => {
     listElement.textContent = completedWork;
     reviewHtmlElements.completedWorksList.appendChild(listElement);
   });
+
+  imageAligning();
 
 };
 
