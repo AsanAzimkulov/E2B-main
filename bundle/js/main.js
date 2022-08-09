@@ -314,11 +314,7 @@ const imageAligning = () => {
       const diff = (736 - img.height);
       img.style.marginBottom = diff + 'px'
       img.style.paddingTop = diff + 1 + 'px'
-      // mb = document.querySelector('.reviews').style.marginBottom;
-      // document.querySelector('.reviews').style.marginBottom = '-' + (diff - 30) + 'px';
-    } else {
-      // document.querySelector('.reviews').style.marginBottom = mb;
-    }
+    } 
     const section = document.querySelector('.reviews');
     const sectionWrapper = document.querySelector('.reviews__wrapper');
     section.style.height = document.defaultView.getComputedStyle(sectionWrapper).height;
@@ -371,6 +367,8 @@ function onOpenModalPreview() {
 
 function onCloseModalPreview() {
   $('html').removeClass('no-scroll-y');
+  // Убираем предыдущий скролл
+  document.querySelector('.modal-preview').scrollTo(0, 0);
   document.body.classList.remove('modal-preview-show');
   document.body.classList.remove('no-scroll-y');
 }
@@ -401,19 +399,25 @@ const createSubscribe = (el, sectionSelector) => {
   }
 };
 
-document.querySelectorAll('.cases__down-bar__blue-link').forEach(el => createSubscribe(el, '.cases'));
+// document.querySelectorAll('.cases__down-bar__blue-link').forEach(el => createSubscribe(el, '.cases'));
 
-const serviceSchemeBordered = document.querySelector('.service-scheme__button--bordered');
+const serviceSchemeButton = document.querySelector('.service-scheme__button--blue-button');
 const serviceSchemeLink = document.querySelector('.service-scheme__button--link');
 
-createSubscribe(serviceSchemeBordered, '.service-scheme');
+createSubscribe(serviceSchemeButton, '.service-scheme');
 createSubscribe(serviceSchemeLink, '.service-scheme');
 
+const promoInvertButton = document.querySelector('.promo--invert .btn__main.popup__consultation_start')
+createSubscribe(promoInvertButton, '.promo--invert');
+
+const tableOrder = document.querySelectorAll('.packages__table-main__order__button').forEach(el => createSubscribe(el, '.packages'));
 
 const exampleFormsLinkInfo = document.querySelectorAll('.example-forms__list__item__down-bar__link--info').forEach(el => createSubscribe(el, '.example-forms'));
 const exampleFormsIconLinkInfo = document.querySelectorAll('.example-forms__list__item__down-bar__price-with-icon__icon-link').forEach(el => createSubscribe(el, '.example-forms'));
 
-const topServicesLinkInfo = document.querySelectorAll('.top-services__item__down-bar__button--link').forEach(el => createSubscribe(el, '.top-services'));
+
+
+// const topServicesLinkInfo = document.querySelectorAll('.top-services__item__down-bar__button--link').forEach(el => createSubscribe(el, '.top-services'));
 
 subscribersModalPreview.forEach((sub) => {
   sub.element.addEventListener('click', function () {

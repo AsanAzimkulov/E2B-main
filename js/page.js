@@ -99,11 +99,7 @@ const imageAligning = () => {
       const diff = (736 - img.height);
       img.style.marginBottom = diff + 'px'
       img.style.paddingTop = diff + 1 + 'px'
-      // mb = document.querySelector('.reviews').style.marginBottom;
-      // document.querySelector('.reviews').style.marginBottom = '-' + (diff - 30) + 'px';
-    } else {
-      // document.querySelector('.reviews').style.marginBottom = mb;
-    }
+    } 
     const section = document.querySelector('.reviews');
     const sectionWrapper = document.querySelector('.reviews__wrapper');
     section.style.height = document.defaultView.getComputedStyle(sectionWrapper).height;

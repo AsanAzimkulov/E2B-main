@@ -1125,8 +1125,8 @@
 }
 @media (min-width: 1920px) {
   .consulting {
-    margin-top: 193px px;
-    margin-bottom: 193px px;
+    margin-top: 193px;
+    margin-bottom: 193px;
   }
 }
 .consulting__image-wrapper {
@@ -2908,7 +2908,6 @@
   }
   .packages__table-main tfoot .packages__table-main__order th:nth-child(3) {
     padding-right: 5px;
-    padding-left: -5px;
     display: block;
     margin-left: -20px;
   }
@@ -3116,7 +3115,6 @@
   }
   .packages tfoot .packages__table-main__order th:nth-child(3) {
     padding-right: 5px;
-    padding-left: -5px;
     display: block;
     margin-left: -20px;
   }
