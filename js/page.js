@@ -102,7 +102,7 @@ const imageAligning = () => {
     if (section.getBoundingClientRect().bottom - imageWrapper.getBoundingClientRect().bottom > 0) {
       imageWrapper.style.paddingTop = section.getBoundingClientRect().bottom - imageWrapper.getBoundingClientRect().bottom + 'px';
     } else {
-      imageWrapper.style.paddingTop = '0px';
+      imageWrapper.style.paddingTop = '6px';
     }
   }
 }
