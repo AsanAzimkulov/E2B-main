@@ -69,15 +69,6 @@
         @include tick-bullet(true);
       }
     }
-    .banner__img{
-        margin-bottom: 27px;
-      @media(min-width: 768px){
-        margin-bottom: 27px;
-      }
-      @media(min-width: 1200px){
-        margin-bottom: 44px;
-      }
-    }
   }
 
   .ul__arrow{

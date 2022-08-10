@@ -88,22 +88,22 @@ reviews.forEach((review) => {
   });
 });
 
-let mb;
+
 
 const imageAligning = () => {
   if (window.matchMedia('(min-width: 1920px)').matches) {
-    const img = document.querySelectorAll('.reviews__image')[1]
-    img.style.marginBottom = '0px';
-    img.style.paddingTop = '0px';
-    if (img.height < 736) {
-      const diff = (736 - img.height);
-      img.style.marginBottom = diff + 'px'
-      img.style.paddingTop = diff + 1 + 'px'
-    } 
+    // section height
     const section = document.querySelector('.reviews');
     const sectionWrapper = document.querySelector('.reviews__wrapper');
     section.style.height = document.defaultView.getComputedStyle(sectionWrapper).height;
     section.style.overflow = 'hidden';
+    // image bottom aligning
+    const imageWrapper = document.querySelector('.reviews__wrapper-image-text--desctop');
+    if (section.getBoundingClientRect().bottom - imageWrapper.getBoundingClientRect().bottom > 0) {
+      imageWrapper.style.paddingTop = section.getBoundingClientRect().bottom - imageWrapper.getBoundingClientRect().bottom + 'px';
+    } else {
+      imageWrapper.style.paddingTop = '0px';
+    }
   }
 }
 let previousSlide;
@@ -131,8 +131,10 @@ const onReviewSlideClick = (index) => {
     const listElement = document.createElement('li');
     const listElementClass = reviewHtmlElements.completedWorks.selector.replace(/\./gi, '',).split(' ')[1];
     listElement.classList.add(listElementClass);
-
-    listElement.textContent = completedWork;
+    const innerLink = document.createElement('a');
+    innerLink.setAttribute('href', '#');
+    innerLink.textContent = completedWork;
+    listElement.appendChild(innerLink);
     reviewHtmlElements.completedWorksList.appendChild(listElement);
   });
 

@@ -257,6 +257,7 @@
 
   @media(min-width: 1440px){
     &__wrapper {
+      max-width: 1110px;
       padding: 56px 50px 43px 50px;
       width: 57.81%;
       margin-top: 68px;
@@ -310,7 +311,7 @@
     &__form {
       margin-left: 20px;
       margin-right: 20px;
-      margin-top: 130px;
+      margin-top: 65px;
       &__input{
         width: 43.14%;
       }

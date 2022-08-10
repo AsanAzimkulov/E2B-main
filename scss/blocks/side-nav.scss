@@ -4,10 +4,12 @@
   mix-blend-mode: difference;
   filter: invert(1);
   @media(min-width: 1920px){
-    display: block;
+    display: flex;
+    height: 100vh;
+    align-items: center;
   }
   position: fixed;
-  top: 188px;
+  top: 0px;
   left: 30px;
   &__nav {
     position: relative;

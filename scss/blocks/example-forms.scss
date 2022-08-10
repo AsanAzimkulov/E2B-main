@@ -164,7 +164,7 @@
         font-size: 18px;
         justify-content: space-between;
         &__text-wrapper{
-          width: 44.44%;
+          width: 46.44%;
         }
         padding: 30px 50px;
         border-radius: 30px;
@@ -180,6 +180,8 @@
           margin-bottom: 34px;
           &__item{
             @include item-spacing(20px);
+            font-size: 18px;
+            line-height: 130%;
           }
         }
         &__image-wrapper{

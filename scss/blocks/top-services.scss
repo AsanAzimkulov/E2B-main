@@ -79,6 +79,8 @@
         margin-left: 0;
         @include price-block;
         display: flex;
+        white-space: nowrap;
+        align-items: baseline;
         margin-bottom: 0 !important;
 
         &__price{

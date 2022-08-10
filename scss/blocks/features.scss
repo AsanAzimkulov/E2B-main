@@ -46,6 +46,7 @@
     @include price-with-button-block;
     background-color: white;
     padding-top: 20px;
+    align-items: center;
 	}
 	&__price-block {
     
@@ -126,7 +127,7 @@
 
   &__wrapper-top {
     padding-top: 35px;
-    margin-bottom: 40px;
+    margin-bottom: 0px;
   }
 
   &__title {
@@ -136,6 +137,7 @@
   }
 
   &__list {
+    margin-bottom: 0px;
     width: 1230px;
     margin-left: -30px;
     background: #FFFFFF;
@@ -180,7 +182,7 @@
     }
 }
 &__down-bar{
-  padding-top: 30px;
+  padding-top: 10px;
 }
 }
 }

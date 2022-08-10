@@ -33,6 +33,10 @@
     line-height: 18px;
     
     &__item{
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
       padding: 0;
       @include item-spacing(15px);
     }
@@ -43,6 +47,11 @@
       padding-left: 0px;
       padding-right: 0px;
     }
+    &__title{
+      font-size: 22px;
+      line-height: 27px;
+      margin-bottom: 15px;
+    }
     &__wrapper{
       @include ver-p(
       15px);
@@ -52,7 +61,21 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+      &__item{
+        @include item-spacing(10px);
+        font-size: 16px;
+        line-height: 19.5px;
+      }
     }
+  }
+
+
+  @media (min-width: 1920px){
+     &__list{
+      &__item{
+        line-height: 20px;
+      }
+     }
   }
   
 }
