@@ -315,7 +315,7 @@ const imageAligning = () => {
     // image bottom aligning
     const imageWrapper = document.querySelector('.reviews__wrapper-image-text--desctop');
     if (section.getBoundingClientRect().bottom - imageWrapper.getBoundingClientRect().bottom > 0) {
-      imageWrapper.style.paddingTop = section.getBoundingClientRect().bottom - imageWrapper.getBoundingClientRect().bottom + 'px';
+      imageWrapper.style.paddingTop = section.getBoundingClientRect().bottom - imageWrapper.getBoundingClientRect().bottom + 6 + 'px';
     } else {
       imageWrapper.style.paddingTop = '6px';
     }
