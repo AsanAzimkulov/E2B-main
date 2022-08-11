@@ -89,15 +89,21 @@
     &__item {
       flex: 0 0 100%;
       max-width: 100%;
-      @media(min-width: 350px){
-        display: flex;
-        justify-content: center;
-        flex: 0 0 100%;
-        max-width: 100%;
-        // &:nth-child(odd){
-        //   justify-content: end;
-        // }
+      display: flex;
+      position: relative;
+      &_active{
+        // justify-content: start;
+        // margin-left: -2em;
       }
+      // @media(min-width: 350px){
+      //   display: flex;
+      //   justify-content: center;
+      //   flex: 0 0 100%;
+      //   max-width: 100%;
+      //   // &:nth-child(odd){
+      //   //   justify-content: end;
+      //   // }
+      // }
   
       @media(min-width: 500px){
         flex: 0 0 50%;

@@ -1924,14 +1924,8 @@
 .specialists .slider__item {
   flex: 0 0 100%;
   max-width: 100%;
-}
-@media (min-width: 350px) {
-  .specialists .slider__item {
-    display: flex;
-    justify-content: center;
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
+  display: flex;
+  position: relative;
 }
 @media (min-width: 500px) {
   .specialists .slider__item {
