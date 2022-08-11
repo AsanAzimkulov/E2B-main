@@ -30,7 +30,17 @@ $(document).ready(function () {
 
   if (window.matchMedia("(max-width: 767.5px)").matches) {
     if ($('.specialists .slider__item').length > 1) {
-      new ChiefSlider('.specialists .slider');
+      if (window.matchMedia("(max-width: 499.5px)").matches) {
+        new ChiefSlider('.specialists .slider', {
+          autoplay: true,
+          interval: 3000
+        });
+      } else {
+        new ChiefSlider('.specialists .slider', {
+          autoplay: true,
+          interval: 5000
+        });
+      }
     }
   }
 

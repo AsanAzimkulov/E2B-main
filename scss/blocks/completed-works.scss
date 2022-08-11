@@ -36,6 +36,9 @@
       a {
         color: inherit;
         text-decoration: none;
+        &:hover{
+          color: #ffffff;
+        }
       }
       padding: 0;
       @include item-spacing(15px);
