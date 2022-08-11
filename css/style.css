@@ -1942,7 +1942,7 @@
 }
 @media (min-width: 430px) {
   .specialists .slider__item_active > div {
-    margin-left: 7em;
+    margin-left: 6em;
   }
 }
 @media (min-width: 500px) {

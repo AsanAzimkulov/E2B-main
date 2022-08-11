@@ -246,7 +246,16 @@ $(document).ready(function () {
   if (window.matchMedia("(max-width: 767.5px)").matches) {
     if ($('.specialists .slider__item').length > 1) {
       if (window.matchMedia("(max-width: 499.5px)").matches) {
-        $(".specialists .slider__item>div").prev().css("margin-left", "2em");
+        if (window.matchMedia("(min-width: 430px)")) {
+          $(".specialists .slider__item>div").prev().css("margin-left", "6em");
+        } else if (window.matchMedia("(min-width: 400px)")) {
+          $(".specialists .slider__item>div").prev().css("margin-left", "5em");
+        } else if (window.matchMedia("(min-width: 364px)")) {
+          $(".specialists .slider__item>div").prev().css("margin-left", "3em");
+        } else {
+          $(".specialists .slider__item>div").prev().css("margin-left", "2em");
+        }
+
         new ChiefSlider('.specialists .slider', {
           autoplay: true,
           interval: 3000
