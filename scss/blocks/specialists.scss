@@ -85,29 +85,34 @@
   
     &__items {
     }
-  
+
+    &__item_active+&__item{}
     &__item {
       flex: 0 0 100%;
       max-width: 100%;
       display: flex;
       position: relative;
-      &_active{
-        // justify-content: start;
-        // margin-left: -2em;
+      
+      &_active>div{
+        margin-left: 2em;
+        @media(min-width: 364px){
+          margin-left: 3em;
+        }
+        @media(min-width: 400px){
+          margin-left: 5em;
+        }
+        @media(min-width: 430px){
+          margin-left: 7em;
+        }
       }
-      // @media(min-width: 350px){
-      //   display: flex;
-      //   justify-content: center;
-      //   flex: 0 0 100%;
-      //   max-width: 100%;
-      //   // &:nth-child(odd){
-      //   //   justify-content: end;
-      //   // }
-      // }
+
   
       @media(min-width: 500px){
         flex: 0 0 50%;
         max-width: 50%;
+        &_active>div{
+          margin-left: 0px;
+        }
       }
   
       &_active {

@@ -1927,10 +1927,31 @@
   display: flex;
   position: relative;
 }
+.specialists .slider__item_active > div {
+  margin-left: 2em;
+}
+@media (min-width: 364px) {
+  .specialists .slider__item_active > div {
+    margin-left: 3em;
+  }
+}
+@media (min-width: 400px) {
+  .specialists .slider__item_active > div {
+    margin-left: 5em;
+  }
+}
+@media (min-width: 430px) {
+  .specialists .slider__item_active > div {
+    margin-left: 7em;
+  }
+}
 @media (min-width: 500px) {
   .specialists .slider__item {
     flex: 0 0 50%;
     max-width: 50%;
+  }
+  .specialists .slider__item_active > div {
+    margin-left: 0px;
   }
 }
 .specialists .slider__indicators {

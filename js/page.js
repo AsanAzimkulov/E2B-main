@@ -31,6 +31,7 @@ $(document).ready(function () {
   if (window.matchMedia("(max-width: 767.5px)").matches) {
     if ($('.specialists .slider__item').length > 1) {
       if (window.matchMedia("(max-width: 499.5px)").matches) {
+        $(".specialists .slider__item>div").prev().css("margin-left", "2em");
         new ChiefSlider('.specialists .slider', {
           autoplay: true,
           interval: 3000
@@ -42,6 +43,7 @@ $(document).ready(function () {
         });
       }
     }
+
   }
 
   // slider Video
