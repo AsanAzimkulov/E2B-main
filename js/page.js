@@ -55,24 +55,10 @@ $(document).ready(function () {
 
   }
 
-  // slider Video
-
-  if ($('.video .slider__item').length > 1) {
-    new ChiefSlider('.video .slider');
-  }
-
-  // Новый слайдер для top-services
-
-  if (window.matchMedia("(max-width: 1199.5px)").matches) {
-    if ($('.top-services .slider__item').length > 1) {
-      new ChiefSlider('.top-services .slider');
-    }
-  }
-
 
 });
 
-// Переключение контента в отзывах
+// Переключение контента в отзывах-------------------------------
 const reviews = document.querySelectorAll('.reviewers .slider__item');
 
 const reviewHtmlElements = {
@@ -166,3 +152,4 @@ const onReviewSlideClick = (index) => {
 reviews.forEach((reviewSlide, index) => {
   reviewSlide.addEventListener('click', () => onReviewSlideClick(index));
 });
+// --------------------------------------

@@ -423,3 +423,117 @@
 
 
 }
+
+// Main
+
+@mixin title-main($invert: false){
+  font-family: 'Montserrat';
+  font-style: normal;
+  @if $invert{
+    color: white;
+  } @else {
+    color: $black;
+  }
+  &__title-main{
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 32px; 
+  }
+  @media(min-width: 375px){
+    &__title-main{
+      font-size: 30px;
+      line-height: 37px;
+    }
+  }
+  @media(min-width: 768px){
+    &__title-main{
+      font-size: 62px;
+      line-height: 76px;
+    }
+  }
+}
+@mixin standart-text-content($invert: false){
+  font-family: 'Montserrat';
+  font-style: normal;
+  @if $invert{
+    color: white;
+  } @else {
+    color: $black;
+  }
+  &__title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+  }
+  p, li{
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 130%;
+  }
+  @media(min-width: 375px){
+    &__title-main{
+      font-size: 30px;
+      line-height: 37px;
+    }
+    &__title{
+      font-size: 22px;
+      line-height: 27px;
+    }
+  }
+  @media(min-width: 768px){
+    &__title-main{
+      font-size: 62px;
+      line-height: 76px;
+    }
+    &__title{
+      font-size: 32px;
+      line-height: 39px;
+    }
+    p,li{
+      font-size: 16px;
+    }
+  }  
+  @media(min-width: 1400px){
+    p,li{
+      font-size: 18px;
+    }
+  }
+}
+
+@mixin m_empty-bullet($invert: false){
+  position: relative;
+  padding-left: 20px;
+  &::before{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 5px;
+    background: none !important;
+    border-radius: 50%;
+    @if $invert {
+      border: 1.5px solid #FFFFFF;
+    } @else {
+      border: 1.5px solid black;
+    }
+
+  }
+  @media(min-width: 768px){
+    padding-left: 35px;
+    &::before{
+      content: '';
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      top: 2.5px;
+      background: none !important;
+      border-radius: 50%;
+      @if $invert {
+        border: 2px solid #FFFFFF;
+      } @else {
+        border: 2px solid black;
+      }
+  
+    }
+  }
+}

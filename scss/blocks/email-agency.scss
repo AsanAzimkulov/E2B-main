@@ -1,0 +1,213 @@
+.email-agency{position: relative;
+  &::after{
+    position: absolute;
+    height: 500px;
+    top: 430px;
+    content: "";
+    background-image: url(../../images/bg-email-text.svg);
+    width: 188%;
+    background-size: 90%;
+    background-position-y: 10%;
+    background-position-x: -177%;
+    background-repeat: no-repeat;
+  }
+  @include title-main(true);
+  @include standart-section-spacing;
+  padding-bottom: 0px;
+  .btn__main{
+    box-shadow: 0px 4px 34px rgba(255, 161, 34, 0.4);
+    z-index: 1;
+  }
+  .banner{
+    &__img--down{
+      width: 100%;
+      order: -1;
+      display: flex;
+      justify-content: center;
+      
+    }
+    &__img-wrapper--down{
+      z-index: 1;
+      pointer-events: none;
+      width: 100%;
+      margin-top: 25%;
+    }
+    &__img--down img{
+      transform: scale(1.556) translateX(-6px);
+      margin-bottom: 22.5%;
+    }
+    &__wrapper{ 
+
+    }
+  }
+  .ul__arrow{
+    margin-bottom: 25px;
+    li{
+      @include m_empty-bullet(true);
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  &__title-label{
+    text-align: center;
+    background: $gr-greeny-blue;
+    border-radius: 16.1738px;
+    transform: rotate(-3.5deg);
+    padding: 9.31px 20.67px;
+    width: 100%;
+    font-weight: 600;
+    font-size: 25.8781px;
+    line-height: 32px;
+    margin-top: -0.3em;
+    margin-bottom: 46px;
+  }
+
+
+
+  @media(min-width: 375px){
+    &__title-label{
+      background: $gr-greeny-blue;
+      border-radius: 20px;
+      transform: rotate(-3.5deg);
+      padding: 11.51px 0px;
+      font-size: 32px;
+      line-height: 39px;
+      width: 100%;
+      margin-top: -0.3em;
+      margin-bottom: 56px;
+    }
+    .ul__arrow{
+      li{
+        font-size: 18px;
+        line-height: 22px;
+      }
+    }
+  }
+  @media(min-width: 400px){
+    &__title-label{
+      width: 100%;
+    }
+  } 
+  @media(min-width: 500px){
+    &__title-label{
+      width: 80%;
+    }
+  }
+  @media(min-width: 600px){
+    &__title-label{
+      width: 65%;
+    }
+  }
+  @media(min-width: 768px){
+    padding-top: 56px;
+    &::after{
+      position: absolute;
+      height: 600px;
+      top: 540px;
+      content: "";
+      background-image: url(../../images/bg-email-text.svg);
+      width: 150%;
+      background-size: 90%;
+      background-position-y: -10px;
+      background-position-x: -150%;
+  }
+    &__title-label{
+      font-size: 52px;
+      line-height: 63px;
+      width: 80%;
+      margin-bottom: 76px;
+    }
+    .banner{
+      &__img--down img{
+        transform: scale(1.1) translateX(9%);
+        margin-bottom: 4%;
+      }
+      &__img-wrapper--down{
+        margin-top: -83px;
+      }
+    }
+    .ul__arrow{
+      margin-bottom: 20px;
+      li{
+        font-size: 24px;
+        line-height: 29px; 
+      }
+    }
+  }
+  @media(min-width: 992px){
+    &__upper-wrapper{
+      width: 100%;
+    }
+    &__title-label{
+      width: 60%;
+    }
+    .banner__wrapper .ul__arrow{
+      margin-bottom: 45px;
+    }
+    .banner__img--down img{
+      margin-bottom: 3.58%;
+    }
+  }
+  @media(min-width: 1200px){
+    &::after{
+      position: absolute;
+      height: 700px;
+      top: 420px;
+      content: "";
+      background-image: url(../../images/bg-email-text.svg);
+      width: 150%;
+      background-size: 90%;
+      background-position-y: -10px;
+      background-position-x: -170%;
+    }
+    padding-top: 45px;
+    .btn-price__block{
+      padding-bottom: 68px;
+    }
+    .banner{
+      &__img-wrapper--down{
+        margin-top: -153px;
+      }
+      &__img--down img{
+        margin-bottom: 3.08%
+      }
+    }
+  }
+  @media(min-width: 1400px){
+    &::after{
+        position: absolute;
+        height: 700px;
+        top: 0px;
+        left: 41%;
+        content: "";
+        background-image: url(../../images/bg-email-text.svg);
+        width: 1250px;
+        background-size: 75%;
+        background-position-y: 0px;
+        background-position-x: 28px;
+    }
+    .ul__arrow{
+      li{
+        font-size: 24px;
+        line-height: 29px;
+      }
+    }
+    .banner__img--down img{
+      transform: scale(1.46);
+      margin-bottom: 5.6%;
+    }
+    &__upper-wrapper{
+      width: 52%;
+    }
+    .banner{
+      &__img-wrapper--down{
+        width: 48%;
+        margin-top: 0;
+      }
+    }
+    &__title-label{
+      width: 95.27%;
+    }
+  }
+}

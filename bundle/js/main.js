@@ -93,126 +93,6 @@ if ($(window).width() < 993) {
     }
   });
 }
-
-// slider video------------------------------------------------------------------------------------------------------
-
-$(document).ready(function () {
-
-  //PRECONNECT TO YOUTUBE IMAGES
-  var linkTag = document.createElement("link");
-  linkTag.rel = "preconnect";
-  linkTag.href = "https://img.youtube.com";
-  //inject tag in the head of the document
-  document.head.appendChild(linkTag);
-
-  var players = [];
-  var YouTubeContainers = document.querySelectorAll(".js-player");
-
-  // Iterate over every YouTube container you may have
-  var loopYT = function loopYT() {
-    var container = YouTubeContainers[i];
-
-    //GET YT Thumbnail Image + Video Title
-    var imageSource = "https://img.youtube.com/vi_webp/" + container.dataset.plyrEmbedId + "/sddefault.webp";
-    var ytUrl = "https://www.youtube.com/watch?v=" + container.dataset.plyrEmbedId + ""; //		var imageTitle = "";
-
-    // Load the Thumbnail Image asynchronously
-    var image = new Image();
-    image.src = imageSource;
-
-    // alt image
-    fetch("https://noembed.com/embed?dataType=json&url=" + ytUrl)
-      .then(function (res) {
-        return res.json();
-      })
-      .then(function (data) {
-        return (image.alt = data.title);
-      });
-
-
-    //   image attributes
-
-    image.width = "100";
-    image.height = "100";
-    // image.loading = 'lazy';
-
-    image.addEventListener("load", function () {
-      container.appendChild(image);
-    }); // When the user clicks on the container, load the embedded YouTube video
-
-
-    //LOAD PLYR ON CLICK
-    container.addEventListener("click", function () {
-      // $(container).parents('.plyr__video').css('padding-bottom', '0');
-      var plyr = container.getAttribute("data-video-id"); //
-
-      var plyr = ".js-player[data-video-id=" + plyr + "]";
-      var player = new Plyr(plyr, {
-        youtube: {
-          //SEE YOUTUBE API: https://developers.google.com/youtube/player_parameters#Parameters
-          origin: window.location.host,
-          iv_load_policy: 3,
-          modestbranding: 1,
-          playsinline: 1,
-          showinfo: 0,
-          rel: 0,
-          enablejsapi: 1,
-          noCookie: true
-        }
-      });
-      player.on("ready", function () {
-        player.play();
-      }); // Attach Play Event
-
-      player.on("play", function () {
-        players.forEach(function (playerElement) {
-          if (playerElement !== player && playerElement.playing) {
-            playerElement.pause();
-          }
-        });
-      });
-
-
-      // Save Player Instance
-      players.push(player);
-
-
-      // STOP Other Players
-      players.forEach(function (player) {
-        player.on("play", function () {
-          player.elements.container.classList.add("player-expand");
-          players.forEach(function (otherPlayer) {
-            if (otherPlayer !== player && otherPlayer.playing) {
-              otherPlayer.pause();
-            }
-          });
-          /**
-           * Pause when opening Lightbox
-           */
-
-          var lightboxLinks = document.querySelectorAll("[class^='glightbox']");
-
-          for (var i = 0; i < lightboxLinks.length; i++) {
-            lightboxLinks[i].addEventListener("click", function () {
-              player.pause();
-            });
-          } // player.toggleControls('progress');
-        });
-        player.on("pause", function () {
-          if (!player.seeking) {
-            player.elements.container.classList.remove("player-expand");
-          }
-        });
-      });
-    });
-  };
-
-  for (var i = 0; i < YouTubeContainers.length; i++) {
-    var ytUrl;
-
-    loopYT();
-  }
-});
 $(document).ready(function () {
   // Slider со страницы about
   if ($('.competencies .slider__item').length > 1) {
@@ -270,24 +150,10 @@ $(document).ready(function () {
 
   }
 
-  // slider Video
-
-  if ($('.video .slider__item').length > 1) {
-    new ChiefSlider('.video .slider');
-  }
-
-  // Новый слайдер для top-services
-
-  if (window.matchMedia("(max-width: 1199.5px)").matches) {
-    if ($('.top-services .slider__item').length > 1) {
-      new ChiefSlider('.top-services .slider');
-    }
-  }
-
 
 });
 
-// Переключение контента в отзывах
+// Переключение контента в отзывах-------------------------------
 const reviews = document.querySelectorAll('.reviewers .slider__item');
 
 const reviewHtmlElements = {
@@ -381,6 +247,7 @@ const onReviewSlideClick = (index) => {
 reviews.forEach((reviewSlide, index) => {
   reviewSlide.addEventListener('click', () => onReviewSlideClick(index));
 });
+// --------------------------------------
 
 function onOpenModalPreview() {
   $('html').addClass('no-scroll-y');
@@ -413,34 +280,32 @@ document.querySelector('.modal-preview').addEventListener('click', function (e) 
 
 const subscribersModalPreview = [];
 
-const createSubscribe = (el, sectionSelector) => {
-  if (el) {
-    subscribersModalPreview.push({
-      element: el,
-      sectionSelector
-    })
-  }
-};
-
-// document.querySelectorAll('.cases__down-bar__blue-link').forEach(el => createSubscribe(el, '.cases'));
-
-const serviceSchemeButton = document.querySelector('.service-scheme__button--blue-button');
-const serviceSchemeLink = document.querySelector('.service-scheme__button--link');
-
-createSubscribe(serviceSchemeButton, '.service-scheme');
-createSubscribe(serviceSchemeLink, '.service-scheme');
-
-const promoInvertButton = document.querySelector('.promo--invert .btn__main.popup__consultation_start')
-createSubscribe(promoInvertButton, '.promo--invert');
-
-const tableOrder = document.querySelectorAll('.packages__table-main__order__button').forEach(el => createSubscribe(el, '.packages'));
-
-const exampleFormsLinkInfo = document.querySelectorAll('.example-forms__list__item__down-bar__link--info').forEach(el => createSubscribe(el, '.example-forms'));
-const exampleFormsIconLinkInfo = document.querySelectorAll('.example-forms__list__item__down-bar__price-with-icon__icon-link').forEach(el => createSubscribe(el, '.example-forms'));
+// const createSubscribe = (el, sectionSelector) => {
+//   if (el) {
+//     subscribersModalPreview.push({
+//       element: el,
+//       sectionSelector
+//     })
+//   }
+// };
 
 
+// const serviceSchemeButton = document.querySelector('.service-scheme__button--blue-button');
+// const serviceSchemeLink = document.querySelector('.service-scheme__button--link');
 
-// const topServicesLinkInfo = document.querySelectorAll('.top-services__item__down-bar__button--link').forEach(el => createSubscribe(el, '.top-services'));
+// createSubscribe(serviceSchemeButton, '.service-scheme');
+// createSubscribe(serviceSchemeLink, '.service-scheme');
+
+// const promoInvertButton = document.querySelector('.promo--invert .btn__main.popup__consultation_start')
+// createSubscribe(promoInvertButton, '.promo--invert');
+
+// const tableOrder = document.querySelectorAll('.packages__table-main__order__button').forEach(el => createSubscribe(el, '.packages'));
+
+// const exampleFormsLinkInfo = document.querySelectorAll('.example-forms__list__item__down-bar__link--info').forEach(el => createSubscribe(el, '.example-forms'));
+// const exampleFormsIconLinkInfo = document.querySelectorAll('.example-forms__list__item__down-bar__price-with-icon__icon-link').forEach(el => createSubscribe(el, '.example-forms'));
+
+
+
 
 subscribersModalPreview.forEach((sub) => {
   sub.element.addEventListener('click', function () {
