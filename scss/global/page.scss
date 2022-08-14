@@ -3,6 +3,7 @@
   &__body{
     overflow-x: hidden;
   }
+
 }
 
 @media (max-width: 991px){
@@ -10,9 +11,7 @@
   background: $gr-dark-blue;
 }
 }
-
-.video {
-  .slider__wrapper{
-    overflow: hidden;
-  }
+#email-agency{
+  margin-top: 0;
 }
+

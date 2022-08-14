@@ -1,0 +1,25 @@
+.service-list{
+  &::before{
+    background: $gr-dark-blue;
+  }
+  .section__title{
+    color: white;
+  }
+  .btn__main{
+    @include orange-button;
+    @media(min-width: 768px){
+      width: fit-content;
+      padding-left: 35px;
+      padding-right: 35px;
+    }
+  }
+  @media(min-width: 991px){
+    &__block_item:nth-child(1){
+      padding-bottom: 60px;
+    }
+    .btn__main{
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+  }
+}

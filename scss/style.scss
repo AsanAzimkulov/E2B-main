@@ -1,7 +1,6 @@
-/// // main site styles
-// @import './main.scss';
 
-// Welcome chain styles
+
+// e2b-Main-page style
 
 // Global (containers, vars etc.)
 
@@ -17,10 +16,38 @@
 
 // Page blocks
 
-@import './blocks/promo.scss';
+@import './blocks/Взято-с-welcome-chain/promo.scss';
 
-@import './blocks/side-nav.scss';
+@import './blocks/Взято-с-welcome-chain/side-nav.scss';
 
-@import './blocks/modal-preview.scss';
+@import './blocks/Взято-с-welcome-chain/modal-preview.scss';
+
+
 
 @import './blocks/email-agency.scss';
+
+
+
+@import './blocks/Взято-с-welcome-chain/example-forms.scss';
+
+
+
+@import './blocks/services.scss';
+
+
+
+@import './blocks/Взято-с-welcome-chain/reviewers.scss';
+
+@import './blocks/Взято-с-welcome-chain/Изменённое/reviews.scss';
+
+@import './blocks/Взято-с-welcome-chain/completed-works.scss';
+
+@import './blocks/Взято-с-welcome-chain/specialists.scss';
+
+
+
+// Исправления блоков с сайта
+
+@import './blocks/Исправления блоков с сайта/features.scss';
+
+@import './blocks/Исправления блоков с сайта/service-list.scss';

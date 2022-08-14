@@ -27,8 +27,10 @@ const onSectionLeaveViewport = (section) => {
         if (entry.isIntersecting) {
           resetCurrentActiveIndicators();
           const element = entry.target;
-          const indicator = document.querySelector(`a[href="#${element.id}"`);
-          indicator.classList.add('side-nav__list__item-link--active');
+          const indicator = document.querySelector(`.side-nav a[href="#${element.id}"`);
+          if (indicator) {
+            indicator.classList.add('side-nav__list__item-link--active');
+          }
           return;
         }
       })

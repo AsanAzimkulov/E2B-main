@@ -1,0 +1,149 @@
+.services{
+  @include standart-section-spacing;
+  margin-top: 50px !important;
+  .example-forms{
+    &__list{
+      &__item{
+        strong{
+          color: $ui-blue;
+        }
+        &__marked--black{
+          color: black !important;
+        }
+        &__marked--blue{
+          color: $ui-blue !important;
+        }
+        @include standart-text-content;
+        &--spacing{
+          @include item-spacing(20px);
+          &>section{
+            @include m_card;
+            margin: 0;
+            border-radius: 30px;
+          }
+        }
+        &__list{
+          &__item{
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+  }
+  @media(min-width: 768px){
+    .example-forms{
+      &__list{
+        &__item{
+          @include standart-text-content;
+          &__list{
+            &__item{
+
+            }
+          }
+          &__down-bar{
+            &__button{
+              &--blue{
+                width: 43.54%;
+              }
+            }
+            &__link{
+              &--info, &--play{
+                width: 43.54%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media(max-width: 1200px){
+    &__list{
+      &__item{
+        display: block;
+      }
+    }
+  }
+  @media(min-width: 1200px){
+    p,li{
+      font-size: 18px;
+      line-height: 23px;
+    }
+
+    .example-forms{
+      &__list{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        &__item{
+          &--spacing{
+            @include item-spacing(30px);
+            &>section{
+              height: 100%;
+              &>a{
+                height: 100%;
+              }
+            }
+            &--db{
+              &-big{
+                width: 57.26%;
+                .example-forms__list__item{
+                  &__down-bar{
+                      justify-content: space-between;
+                      &__link{
+                        &--info , &--play{
+                          width: 44.30%;
+                          }
+                      }
+                      &__button{
+                        &--blue{
+                          width: 44.30%;
+                        }
+                      }
+                  }
+                }
+              }
+              &-small{
+                width: 40.17%;
+                .example-forms__list__item{
+                  &__down-bar{
+                      justify-content: center;
+                      align-items: flex-end;
+                      &__link{
+                        &--info , &--play{
+                          display: none;
+                          }
+                      }
+                      &__button{
+                        &--blue{
+                          width: 75.67%;
+                        }
+                      }
+                  }
+                }
+              }
+
+              &-big, &-small{
+                .example-forms__list__item__text-wrapper, .example-forms__list__item__image-wrapper, .example-forms__list__item__down-bar{
+                  width: 100%;
+                }
+              }
+            }
+          }
+          &__image{
+            height: fit-content;
+            &-wrapper{
+              align-items: center;
+            }
+          }
+          &__down-bar{
+            &__button{
+              &--blue{
+                width: 52.83%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

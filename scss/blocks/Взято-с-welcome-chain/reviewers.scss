@@ -1,0 +1,129 @@
+$block-height-320: 135px;
+$block-width-320: 150px;
+
+$block-height-768: 158px;
+$block-width-768: 175px;
+
+$block-height-1920: 135px;
+$block-width-1920: 150px;
+
+.reviewers{
+  width: 100%;
+  &__wrapper{
+    margin-top: 40px;
+  }
+  .slider__wrapper{
+    @include ver-m(25px);
+  }
+  .slider__container{
+    justify-content: center;
+    overflow: visible;
+  }
+  .slider__items{
+    justify-content: center;
+  }
+  .slider__item{
+    width: $block-width-320;
+    max-width: 180px;
+    padding: 0 15px;
+    cursor: pointer;
+  }
+  .slider__indicators{
+    li{
+      box-shadow: none;
+    }
+  }
+  &__block{
+    max-width: $block-width-320;
+    &__frame{
+      @include blue-frame;
+    }
+    &__image{
+      width: $block-width-320;
+      height: $block-height-320;
+    }
+    &__title{
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 20px;
+      margin-top: 10px;
+      text-align: center;
+      padding: 0 5%;
+      width: $block-width-320;
+    }
+  }
+
+  @media(min-width: 768px){
+    &__wrapper{
+      margin-top: 40px;
+    }
+    .slider__wrapper{
+      @include ver-m(30px, 40px);
+    }
+    .slider__item{
+      width: $block-width-768;
+      max-width: 235px;
+      padding: 0 30px;
+    }
+    .slider__indicators{
+      display: none;
+    }
+
+    &__block{
+      max-width: $block-width-768;
+      &__frame{
+        @include blue-frame;
+      }
+      &__image{
+        width: $block-width-768;
+        height: $block-height-768;
+      }
+      &__title{
+        font-size: 16px;
+        line-height: 20px;
+        padding: 0 10%;
+        width: $block-width-768;
+      }
+    }  
+  }
+
+  @media(min-width: 1920px){
+    .slider__items{
+        justify-content: space-between;
+    }
+
+    &__wrapper{
+      margin-top: 0;
+    }
+    .slider__wrapper{
+      @include ver-m(30px, 40px);
+    }
+    .slider__item{
+      width: $block-width-1920;
+      max-width: $block-width-1920;
+      padding: 0;
+      &:first-child{
+        padding-left: 10px;
+      }
+
+    }
+
+    &__block{
+      max-width: $block-width-1920;
+      &__frame{
+        @include blue-frame;
+      }
+      &__image{
+        width: $block-width-1920;
+        height: $block-height-1920;
+      }
+      &__title{
+        font-size: 16px;
+        line-height: 20px;
+        padding: 0 10%;
+        width: $block-width-1920;
+      }
+    }
+  }
+}
