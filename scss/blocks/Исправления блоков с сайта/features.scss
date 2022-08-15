@@ -1,11 +1,14 @@
 .features{
   .section__description{
-    max-width: 67%;
     margin-bottom: 0;
     margin-top: 1em;
   }
   &__block{
     @media(max-width: 768px){
+      padding-bottom: 24px;
+      .section__description{
+        max-width: 67%;
+      }
       &>div{
         width: 100%;
       }
@@ -42,6 +45,9 @@
     }
   }
   @media(min-width: 768px){
+    .section__description{
+      max-width: 67%;
+    }
     &__button{
       width: 38.89%;
     }
@@ -51,6 +57,7 @@
       width: 64%;
     }
     &__block{
+      padding-bottom: 30px;
       &__down-bar{
         &__link{
           font-size: 18px;

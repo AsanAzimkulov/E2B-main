@@ -504,8 +504,8 @@
               <div class="example-forms__list__item__down-bar">
                 <button
                   class="example-forms__list__item__down-bar__button__link example-forms__list__item__down-bar__link--play">
-                  Подробнее</butt>
-                  <button class="example-forms__list__item__down-bar__button--blue">Подробнее</button>
+                  Смотреть видео</button>
+                <button class="example-forms__list__item__down-bar__button--blue">Подробнее</button>
               </div>
             </a>
           </section>
@@ -860,52 +860,43 @@
       </div>
     </div>
   </section>
-  <section class="modal-preview">
-    <div class="modal-preview__wrapper">
-      <div class="modal-preview__close__wrapper">
-        <div class="modal-preview__close"></div>
-      </div>
-      <h2 class="modal-preview__title">Easer Form</h2>
-      <div class="modal-preview__image-wrapper">
-        <img src="./images/modal-preview.png" alt="Превью услуги" class="modal-preview__image">
-      </div>
-      <div class="modal-preview__text-wrapper">
-        <p class="modal-preview__description">
-          Работа с визуальным редактором и адаптивностью: добавление/удаление/редактирование текстовых блоков,
-          изображений, проставление ссылок, соцсетей
-        </p>
-        <ul class="modal-preview__list">
-          <li class="modal-preview__list__item">
-            Создание письма
+  <section class="consulting-form">
+    <div class="container-md consulting-form__wrapper">
+      <div class="consulting-form__list-wrapper">
+        <h2 class="consulting-form__title">
+          Мы являемся
+        </h2>
+        <ul class="consulting-form__list">
+          <li class="consulting-form__list__item">Разработчик ПО для популярных Web платформ</li>
+          <li class="consulting-form__list__item">Партнёры популярных почтовых сервисов</li>
+          <li class="consulting-form__list__item">
+            Разработчики триггеров для тильды <strong class="consulting-form__marked--orange">- Эксклюзив</strong>
           </li>
-          <li class="modal-preview__list__item">
-            Визуальное оформление: структура, стиль
+          <li class="consulting-form__list__item">
+            Разработчики триггеров брошенной корзины <strong class="consulting-form__marked--orange">-
+              Эксклюзив</strong>
           </li>
-          <li class="modal-preview__list__item">
-            Отправка, интеграция с метрикой, настройка по событию.
-          </li>
-          <li class="modal-preview__list__item">
-            Работа с визуальным редактором и адаптивностью: добавление/удаление/редактирование текстовых блоков,
-            изображений, проставление ссылок, соцсетей;
-          </li>
+          <li class="consulting-form__list__item">Разработчики сервисов</li>
+          <li class="consulting-form__list__item">Интеграторы email-маркетинга</li>
         </ul>
-        <p class="modal-preview__description">
-          Работа с визуальным редактором и адаптивностью: добавление/удаление/редактирование текстовых блоков,
-          изображений, проставление ссылок, соцсетей
-        </p>
+
       </div>
-      <form action="#" method="post" class="modal-preview__form">
-        <input type="tel" class="modal-preview__form__input" placeholder="Телефон" required>
-        <input type="email" placeholder="Почта" class="modal-preview__form__input" required>
-        <div class="modal-preview__form__price-block">
-          <div class="modal-preview__form__price-block__discount">от 18 000 ₽</div>
-          <div class="modal-preview__form__price-block__price">от 14 900 ₽</div>
-        </div>
-        <input type="submit" class="modal-preview__form__submit" value="Оставить заяку">
-        <a href="#" class="modal-preview__form__privacy-policy">
-          Отправляя свои данные вы соглашаетесь на передачу данных на условиях Политики и на рекламную рассылку
-        </a>
-      </form>
+      <div class="consulting-form__form-block-wrapper">
+        <h3 class="consulting-form__title">
+          Оставьте заявку на консультацию
+        </h3>
+        <p class="consulting-form__form__description">
+          Проконсультируем по любому вопросу по email-маркетингу и настроим эффективную рассылку
+        </p>
+        <form action="#" method='post' class="consulting-form__form">
+          <input type="tel" class="consulting-form__form__input" placeholder="Телефон">
+          <input type="email" class="consulting-form__form__input" placeholder="Почта">
+          <button type="submit" class="consulting-form__form__submit">Оставить заявку</button>
+          <a href="#" class="consulting-form__form__privacy-policy">
+            Заполняя данную форму я даю согласие на обработку персональных данных и принимаю условия политики
+          </a>
+        </form>
+      </div>
     </div>
   </section>
   <section class="features" id="features">
@@ -1071,6 +1062,54 @@
           </div>
         </div>
       </div>
+    </div>
+  </section>
+  <section class="modal-preview">
+    <div class="modal-preview__wrapper">
+      <div class="modal-preview__close__wrapper">
+        <div class="modal-preview__close"></div>
+      </div>
+      <h2 class="modal-preview__title">Easer Form</h2>
+      <div class="modal-preview__image-wrapper">
+        <img src="./images/modal-preview.png" alt="Превью услуги" class="modal-preview__image">
+      </div>
+      <div class="modal-preview__text-wrapper">
+        <p class="modal-preview__description">
+          Работа с визуальным редактором и адаптивностью: добавление/удаление/редактирование текстовых блоков,
+          изображений, проставление ссылок, соцсетей
+        </p>
+        <ul class="modal-preview__list">
+          <li class="modal-preview__list__item">
+            Создание письма
+          </li>
+          <li class="modal-preview__list__item">
+            Визуальное оформление: структура, стиль
+          </li>
+          <li class="modal-preview__list__item">
+            Отправка, интеграция с метрикой, настройка по событию.
+          </li>
+          <li class="modal-preview__list__item">
+            Работа с визуальным редактором и адаптивностью: добавление/удаление/редактирование текстовых блоков,
+            изображений, проставление ссылок, соцсетей;
+          </li>
+        </ul>
+        <p class="modal-preview__description">
+          Работа с визуальным редактором и адаптивностью: добавление/удаление/редактирование текстовых блоков,
+          изображений, проставление ссылок, соцсетей
+        </p>
+      </div>
+      <form action="#" method="post" class="modal-preview__form">
+        <input type="tel" class="modal-preview__form__input" placeholder="Телефон" required>
+        <input type="email" placeholder="Почта" class="modal-preview__form__input" required>
+        <div class="modal-preview__form__price-block">
+          <div class="modal-preview__form__price-block__discount">от 18 000 ₽</div>
+          <div class="modal-preview__form__price-block__price">от 14 900 ₽</div>
+        </div>
+        <input type="submit" class="modal-preview__form__submit" value="Оставить заяку">
+        <a href="#" class="modal-preview__form__privacy-policy">
+          Отправляя свои данные вы соглашаетесь на передачу данных на условиях Политики и на рекламную рассылку
+        </a>
+      </form>
     </div>
   </section>
   <footer class="footer">

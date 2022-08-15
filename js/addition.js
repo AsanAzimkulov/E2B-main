@@ -84,4 +84,44 @@ if ($(window).width() < 993) {
       $(this).parent().children('.sub-menu').slideDown(500);
     }
   });
+} else {
+  const titles = $('.header__menu > .menu > li');
+  const subMenu = $('.header__menu > .menu > li:first-child > .sub-menu');
+
+  const subMenuItems = $('.header__menu > .menu > li:first-child > .sub-menu > li');
+
+  const subMenuItemsTitles = $('.header__menu > .menu > li:first-child > .sub-menu > li > a');
+
+  const subMenuItemsLists = $('.header__menu > .menu > li:first-child > .sub-menu > li > ul');
+  subMenuItemsLists.hide();
+
+  const pasteBoard = document.createElement('div');
+  pasteBoard.classList.add('sub-menu__paste-board');
+  subMenu.append(pasteBoard);
+
+  let initialSubMenuHeight;
+  let isInitialSubMenuHeightSet = false;
+  let lastTarget;
+  subMenuItemsTitles.mouseenter((e) => {
+    if (e.currentTarget == lastTarget) return;
+    lastTarget = e.currentTarget;
+    pasteBoard.innerHTML = $(e.currentTarget).siblings().get(0).outerHTML;
+    $(pasteBoard).children('ul').show().css('padding-left', '0px');
+
+    // Resize sub-menu, if pasteBoard scrolling
+    const pasteBoardHeight = $($(pasteBoard).children('ul')).outerHeight();
+    const subMenuHeight = $(subMenu).height();
+    if (!isInitialSubMenuHeightSet) {
+      initialSubMenuHeight = subMenuHeight;
+      isInitialSubMenuHeightSet = true;
+    }
+
+    if (pasteBoardHeight > subMenuHeight) {
+      subMenu.height(pasteBoardHeight);
+    } else {
+      subMenu.height(initialSubMenuHeight);
+    }
+
+  })
+
 }

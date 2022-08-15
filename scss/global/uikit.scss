@@ -530,6 +530,44 @@
     }
   }
 }
+@mixin m_empty-bullet-big($invert: false){
+  position: relative;
+  padding-left: 30px;
+  &::before{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 2.5px;
+    left: 0px;
+    background: none !important;
+    border-radius: 50%;
+    @if $invert {
+      border: 2px solid #FFFFFF;
+    } @else {
+      border: 2px solid black;
+    }
+
+  }
+  @media(min-width: 768px){
+    padding-left: 30px;
+    &::before{
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      top: 0px;
+      background: none !important;
+      border-radius: 50%;
+      @if $invert {
+        border: 2px solid #FFFFFF;
+      } @else {
+        border: 2px solid black;
+      }
+  
+    }
+  } 
+}
 @mixin m_card(){
   background: white;
   &:hover{
