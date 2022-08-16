@@ -131,5 +131,9 @@ $(document).ready(function () {
     reviewSlide.addEventListener('click', () => onReviewSlideClick(index));
   });
   // --------------------------------------
-
+  // Секция услуг с анимациями
+  // $('.example-forms__list__item__image-wrapper').on('click', (e) => {
+  //   e.stopPropagation();
+  //   e.preventDefault();
+  // });
 });

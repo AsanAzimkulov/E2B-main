@@ -1,11 +1,60 @@
 .services{
   @include standart-section-spacing;
   margin-top: 50px !important;
+  .services__list svg.services__list__item__svg-big{
+    width: 90%;
+    @media (max-width: 767.5px){
+      margin-left: 5%;
+    }
+  }
+  @media (max-width: 767.5px){
+    .services__list .services__list__item--down svg{
+      transform: translateX(-118%) scale(0.55) translateY(40%);
+    }
+  }
+  @media(max-width: 1999.5px){
+    .services__list .services__list__item--down .example-forms__list__item__image-wrapper{
+      &::after{
+        content: "";
+        position: absolute;
+        width: 100%;
+        /* left: -154px; */
+        height: 40px;
+        left: 0px;
+        /* top: 0px; */
+        bottom: -5px;
+        background: linear-gradient(360deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+        @media(max-width: 500px){
+          height: 25px;
+        }
+      }
+    }
+  }
   .example-forms{
     &__list{
       &__item{
+        &__down-bar{
+          z-index: 2;
+        }
         strong{
           color: $ui-blue;
+        }
+        &__image-wrapper{
+          z-index: 2;
+          svg{
+            z-index: 2;
+            position: relative;
+            overflow: visible;
+            width: 100%;
+            height: 100%;
+            @media(min-width: 768px){
+              width: 90%;
+              margin: 20px 0;
+            }
+            @media(min-width: 991px){
+              margin-top: 40px;
+            }
+          }
         }
         &__marked--black{
           color: black !important;
@@ -26,6 +75,511 @@
           &__item{
             margin-left: 10px;
           }
+        }
+      }
+    }
+
+  }
+  &__list{
+    &__first{
+      position: relative;
+      &::before{
+        position: absolute;
+        content: "";
+        height: 100%;
+        width: 50%;
+        right: 29px;
+        background-position-x: -30px;
+        top: -32px;
+        background-size: 110%;
+        background-image: url(../../images/effects/block-with-animations/bg1.svg);
+        background-repeat: no-repeat;
+        @media(max-width: 1199.5px){
+            position: absolute;
+            content: "";
+            height: 100%;
+            width: 100%;
+            right: unset;
+            background-position-x: unset;
+            top: unset; 
+            background-position-y: center;
+            bottom: -114px;
+            background-size: 100%;
+            background-image: url(../../images/effects/block-with-animations/bg1.svg);
+            background-repeat: no-repeat;
+        }
+      }
+      svg{
+        opacity: 0;
+      }
+      &.is-in-viewport{
+        svg{
+          opacity: 1;
+        }
+        [id = "1-1"]{
+          transform: translateY(89px) translateX(-74px);
+          animation: firstSlideToRightUp 800ms ease-in-out 1s 1 forwards, firstAppearing 200ms cubic-bezier(.66,.89,.47,.94) 0s forwards;
+        }
+  
+        [id = "1-1-range-max"]{
+          opacity: 0;
+          transform: scaleX(0.3) scaleY(0.3) translateX(-120px) translateY(72px);
+          transform-origin: center;
+          animation: firstRangeGrowing 800ms cubic-bezier(.66,.89,.47,.94) 1s 1 forwards;
+        }
+        [id = "1-1-range-min"]{
+          transform-origin: center;
+          animation: firstRangeDisolving 20ms linear 1s 1 forwards;
+        }
+        [id = "1-1-aura"]{
+          opacity: 0;
+          transform: translateX(143px);
+          transform-origin: center;
+          animation: firstAuraBlinking 800ms cubic-bezier(.66,.89,.47,.94) 1s 1 forwards;
+        }
+        [id = "1-2"]{
+          opacity:0 ;
+          transform: translateY(-35px);
+          animation: firstAppearing 600ms ease-in-out 1.2s 1 forwards, firstSlideDown 900ms cubic-bezier(0.215, 0.610, 0.355, 1.000) 2.3s 1 forwards;
+        }
+        [id = "1-2-scale-1"] rect{
+          animation: firstScaleFourtyThree 900ms cubic-bezier(0.215, 0.610, 0.355, 1.000) 2.3s 1 forwards;
+        }
+        [id = "1-2-scale-2"] rect{
+          animation: firstScaleFiftySeven 900ms cubic-bezier(0.215, 0.610, 0.355, 1.000) 2.3s 1 forwards;
+        }
+      }
+      svg{
+        opacity: 0;
+      }
+    }
+    &__second {
+        position: relative;
+        &::before{
+          position: absolute;
+          content: "";
+          height: 50%;
+          width: 100%;
+          right: 29px;
+          bottom: 69px;
+          background-size: 100%;
+          background-image: url(../../images/effects/block-with-animations/bg2.svg);
+          background-repeat: no-repeat;
+          @media(max-width: 1199.5px){
+            position: absolute;
+            content: "";
+            height: 100%;
+            width: 100%;
+            right: unset;
+            background-position-x: unset;
+            top: unset; 
+            background-position-y: center;
+            bottom: -114px;
+            background-size: 100%;
+            background-image: url(../../images/effects/block-with-animations/bg1.svg);
+            background-repeat: no-repeat;
+        }
+        }
+        svg{
+          opacity: 0;
+        }
+        &.is-in-viewport{
+          svg{
+            opacity: 1;
+          }
+          [id = "2-1"]{
+            transform: translateY(0px) translateX(-74px);
+            animation: secondSlideToRightUp 800ms ease-in-out 1s 1 forwards, firstAppearing 200ms cubic-bezier(.66,.89,.47,.94) 0s forwards;
+          }
+    
+          [id = "2-1-range-max"]{
+            opacity: 0;
+            transform: scaleX(0.3) scaleY(0.3) translateX(-120px) translateY(72px);
+            transform-origin: center;
+            animation: firstRangeGrowing 800ms cubic-bezier(.66,.89,.47,.94) 1s 1 forwards;
+          }
+          [id = "2-1-range-min"]{
+            transform-origin: left;
+            animation: firstRangeDisolving 20ms linear 1s 1 forwards;
+          }
+          [id = "2-1-aura"]{
+            opacity: 0;
+            transform-origin: center;
+            animation: secondAuraBlinking 800ms cubic-bezier(.66,.89,.47,.94) 1s 1 forwards;
+          }
+          [id = "2-2"]{
+            transform: translateX(138px) translateY(0px);
+            opacity:0;
+            transform: translateY(-35px);
+            animation: secondAppearingAndSlideUp 600ms ease-in-out 1.2s 1 forwards, secondSlideLeft 900ms cubic-bezier(0.215, 0.610, 0.355, 1.000) 2.3s 1 forwards;
+          }
+          [id = "2-2-scale-max"] > rect {
+              transform: scaleY(0.01);
+              transform-box: fill-box;
+              transform-origin: bottom;
+              animation: secondRangeGrowing 900ms cubic-bezier(0.215, 0.610, 0.355, 1.000) 2.3s 1 forwards;
+          }
+        }
+      
+    }
+    &__third{
+      position: relative;
+      &::before{
+        position: absolute;
+        content: "";
+        height: 50%;
+        width: 100%;
+        right: 29px;
+        bottom: 25px;
+        background-size: 120%;
+        background-image: url(../../images/effects/block-with-animations/bg3.svg);
+        background-repeat: no-repeat;
+        @media(max-width: 1199.5px){
+          position: absolute;
+          content: "";
+          height: 100%;
+          width: 100%;
+          right: unset;
+          background-position-x: unset;
+          top: unset; 
+          background-position-y: center;
+          bottom: -114px;
+          background-size: 100%;
+          background-image: url(../../images/effects/block-with-animations/bg1.svg);
+          background-repeat: no-repeat;
+      }
+      }
+
+      svg{
+        opacity: 0;
+      }
+      &.is-in-viewport{
+        svg{
+          opacity: 1;
+        }
+        [id = "3"]{
+          animation: firstAppearing 200ms cubic-bezier(.66,.89,.47,.94) 0s forwards;
+        }
+        [id = "3-scale-1"] > rect{
+          animation: thirdScaleNinety 2.3s cubic-bezier(0.230, 1.000, 0.320, 1.000) 1s forwards;
+        }
+        [id = "3-scale-2"]{
+          animation: thirdScaleTwentyFive 2.3s cubic-bezier(0.230, 1.000, 0.320, 1.000) 1s forwards;
+        }
+        [id = "3-scale-3"]{
+          animation: thirdScaleThirty 2.3s cubic-bezier(0.230, 1.000, 0.320, 1.000) 1s forwards;
+        }
+  
+  
+        [id = "3-price-max-1"], [id = "3-price-max-2"], [id = "3-price-max-3"] {
+          opacity: 0;
+          animation: thirdTextDissolve 2.3s cubic-bezier(0.230, 1.000, 0.320, 1.000) 1s forwards;
+        }
+      }
+      
+      
+    }
+    &__fourth{
+      position: relative;
+      &::before{
+        position: absolute;
+        content: "";
+        height: 100%;
+        width: 50%;
+        right: 29px;
+        background-position-x: -30px;
+        top: -32px;
+        background-size: 110%;
+        background-image: url(../../images/effects/block-with-animations/bg4.svg);
+        background-repeat: no-repeat;
+        @media(max-width: 1199.5px){
+          position: absolute;
+          content: "";
+          height: 50%;
+          width: 100%;
+          right: unset;
+          background-position-x: unset;
+          top: unset;
+          background-position-y: center;
+          bottom: 103px;
+          background-size: 80%;
+          background-image: url(../../images/effects/block-with-animations/bg1.svg);
+          background-repeat: no-repeat;
+          @media(max-width: 400px){
+            bottom: 60px;
+          }
+      }
+      }
+      .example-forms__list__item__image-wrapper{
+        position: relative;
+        svg{
+          position: absolute; 
+          transform: scale(0.66) translateY(130px) translateX(-162px); 
+        }
+      }
+      svg{
+        opacity: 0;
+      }
+      &.is-in-viewport{
+        svg{
+          opacity: 1;
+        }
+        [id="4"]{
+          transform: translateY(136px);
+          animation: fourthSlideUp 1200ms cubic-bezier(.66,.89,.47,.94) 0s 1 forwards;
+        }
+        [id="4-price-up-max"], [id="4-price-down-max"] {
+          opacity: 0;
+          animation: fourthAppearing 1400ms cubic-bezier(.66,.89,.47,.94) 1800ms 1 forwards;
+        }
+        [id="4-price-up-min"], [id="4-price-down-min"] {
+          opacity: 1;
+          animation: fourthDisolving 1400ms cubic-bezier(.66,.89,.47,.94) 1800ms 1 forwards;
+        }
+        [id="4-range-max"]{
+          transform-box: fill-box;
+          transform-origin: left;
+          opacity: 0;
+          animation: fourthRangeGrowing 1300ms cubic-bezier(.66,.89,.47,.94) 1800ms 1 forwards, fourthAuraAndRangePositioning 1300ms cubic-bezier(.66,.89,.47,.94) 1800ms 1 forwards;
+        }
+        [id="4-range-min"]{
+          opacity: 1;
+          animation: fourthDisolving 100ms cubic-bezier(.66,.89,.47,.94) 1750ms 1 forwards;
+        }
+        [id="4-aura"]{
+          transform-box: fill-box;
+          transform-origin: left;
+          opacity: 0;
+          animation: fourthAuraBlinking 1300ms cubic-bezier(.66,.89,.47,.94) 1700ms 1 forwards, fourthAuraAndRangePositioning 1300ms cubic-bezier(.66,.89,.47,.94) 1700ms 1 forwards;
+        }
+      }
+    }
+    &__fifth{
+      position: relative;
+      &::before{
+        position: absolute;
+        content: "";
+        height: 50%;
+        width: 100%;
+        right: 29px;
+        bottom: 13px;
+        background-size: 120%;
+        background-image: url(../../images/effects/block-with-animations/bg5.svg);
+        background-repeat: no-repeat;
+        @media(max-width: 1199.5px){
+          position: absolute;
+          content: "";
+          height: 100%;
+          width: 100%;
+          right: 0;
+          background-position-x: 37%;
+          top: unset;
+          background-position-y: center;
+          bottom: -114px;
+          background-size: 130%;
+          background-image: url(../../images/effects/block-with-animations/bg5.svg);
+          background-repeat: no-repeat;
+
+      }
+      }
+      svg{
+        opacity: 0;
+      }
+      &.is-in-viewport{
+        svg{
+          opacity: 1;
+        }
+        [id="5-back"]{
+          animation: firstAppearing 400ms cubic-bezier(.66,.89,.47,.94) 0ms forwards;
+        }
+        [id="1"]{
+          opacity: 0;
+          animation: fifthCardSlide 400ms cubic-bezier(.66,.89,.47,.94) 600ms forwards;
+        }
+        [id="2"]{
+          opacity: 0;
+          animation: firstAppearing 200ms cubic-bezier(.66,.89,.47,.94) 1s forwards;
+        }
+        [id="3"]{
+          opacity: 0;
+          animation: firstAppearing 200ms cubic-bezier(.66,.89,.47,.94) 1.4s forwards;
+        }
+        [id="4"]{
+          opacity: 0;
+          animation: firstAppearing 200ms cubic-bezier(.66,.89,.47,.94) 1.8s forwards;
+        }
+        [id="5_2"]{
+          opacity: 0;
+          animation: firstAppearing 200ms cubic-bezier(.66,.89,.47,.94) 2.2s forwards;
+        }
+        [id="6"]{
+          opacity: 0;
+          animation: firstAppearing 200ms cubic-bezier(.66,.89,.47,.94) 2.6s forwards;
+        }
+        [id="7"]{
+          opacity: 0;
+          animation: firstAppearing 200ms cubic-bezier(.66,.89,.47,.94) 3s forwards;
+        }
+      }
+    }
+    &__sixth{
+      position: relative;
+      &::before{
+        position: absolute;
+        content: "";
+        height: 50%;
+        width: 100%;
+        right: 24px;
+        background-position-x: -47px;
+        bottom: 111px;
+        background-size: 120%;
+        background-image: url(../../images/effects/block-with-animations/bg6.svg);
+        background-repeat: no-repeat;
+        @media(max-width: 1199.5px){
+          position: absolute;
+          content: "";
+          height: 100%;
+          width: 100%;
+          right: 0;
+          background-position-x: 37%;
+          top: unset;
+          background-position-y: center;
+          bottom: -114px;
+          background-size: 130%;
+          background-image: url(../../images/effects/block-with-animations/bg6.svg);
+          background-repeat: no-repeat;
+      }
+    }
+    svg{
+      opacity: 0;
+    }
+    &.is-in-viewport{
+      svg{
+        opacity: 1;
+      }
+      [id="6-1"]{
+        transform: translateX(55px);
+        animation: firstAppearing 600ms cubic-bezier(0.315, 1.065, 0.750, 1.005) 0ms forwards, sixthSlideLeft 700ms cubic-bezier(0.315, 1.065, 0.750, 1.005) 1000ms forwards, ;
+      }
+      [id="6-2"]{
+        transform: translateY(26px) translateX(55px);
+        opacity: 0;
+        animation: sixthSlideLeftAndAppearing 700ms cubic-bezier(0.315, 1.065, 0.750, 1.005) 1000ms forwards, sixthSlideRight 1s cubic-bezier(0.315, 1.065, 0.750, 1.005) 2.2s forwards;
+      }
+      [id="6-1-price-max"]{
+        opacity: 0;
+        animation: fourthAppearing 1.3s cubic-bezier(.66,.89,.47,.94) 1000ms forwards;
+      }
+      [id="6-1-price-min"]{
+        opacity: 1;
+        animation: fourthDisolving 1.3s cubic-bezier(.66,.89,.47,.94) 1000ms forwards;
+      }
+      [id="6-1-range-min"]{
+        opacity: 1;
+        animation: fourthDisolving 100ms cubic-bezier(.66,.89,.47,.94) 900ms forwards;
+      }
+      [id="6-1-range-max"]{
+        transform-box: fill-box;
+        transform-origin: left;
+        opacity: 0;
+        transform: scale(0.01);
+        animation: fourthRangeGrowing 1.3s cubic-bezier(.66,.89,.47,.94) 1000ms forwards;
+      }
+      [id="6-1-aura"]{
+        transform-box: fill-box;
+        transform-origin: left;
+        opacity: 0;
+        transform: scale(0.01);
+        animation: fourthAuraBlinking 1.3s cubic-bezier(.66,.89,.47,.94) 800ms forwards;
+      }
+      [id="6-1-aura"]{
+        opacity: 0;
+      }
+      [id="6-2-scale-1"] rect{
+        animation:sixthScaleThirtee 1s cubic-bezier(0.315, 1.065, 0.750, 1.005) 2.2s forwards;
+      }
+      [id="6-2-scale-2"] rect{
+        animation: sixthScaleNinetyMore 1s cubic-bezier(0.315, 1.065, 0.750, 1.005) 2.2s forwards;
+      }
+    }
+    }
+    &__seventh{
+      position: relative;
+      &::before{
+        position: absolute;
+        content: "";
+        height: 50%;
+        width: 100%;
+        right: 29px;
+        bottom: 13px;
+        background-size: 120%;
+        background-image: url(../../images/effects/block-with-animations/bg7.svg);
+        background-repeat: no-repeat;
+        @media(max-width: 1199.5px){
+          position: absolute;
+          content: "";
+          height: 100%;
+          width: 100%;
+          right: 0;
+          background-position-x: 37%;
+          top: unset;
+          background-position-y: center;
+          bottom: -114px;
+          background-size: 130%;
+          background-image: url(../../images/effects/block-with-animations/bg7.svg);
+          background-repeat: no-repeat;
+
+      }
+    }
+    svg{
+      opacity: 0;
+    }
+    &.is-in-viewport{
+      svg{
+        opacity: 1;
+      }
+      [id="7-1"]{
+        transform: translateX(87px) translateY(-57px);
+        opacity: 0;
+        animation: firstAppearing 450ms cubic-bezier(.66,.89,.47,.94) 1 forwards, seventhFirstPositioning 800ms cubic-bezier(0.315, 1.065, 0.750, 1.005) 1.45s 1 forwards;
+      }
+      [id="7-1-price-max"], [id="7-1-range"]{
+        opacity: 0;
+        animation: firstAppearing 450ms cubic-bezier(.66,.89,.47,.94) 1.45s 1 forwards;
+      }
+      [id="7-1-price-min"]{
+        opacity: 1;
+        animation: fourthDisolving 450ms cubic-bezier(.66,.89,.47,.94) 1.45s 1 forwards;
+      }
+      [id="7-2"]{
+        opacity: 0;
+        transform: translateX(11px) translateY(91px);
+        animation: firstAppearing 450ms cubic-bezier(.66,.89,.47,.94) 1.45s 1 forwards, seventhSecondPositioning 800ms cubic-bezier(0.315, 1.065, 0.750, 1.005) 2.9s 1 forwards;
+      }
+      [id="7-2-price-max"], [id="7-2-scale-max"]{
+        opacity: 0;
+        animation: firstAppearing 450ms cubic-bezier(.66,.89,.47,.94) 2.9s 1 forwards;
+      }
+      [id="7-2-price-min"]{
+        transform: translateX(-9px);
+        opacity: 1;
+        animation: fourthDisolving 450ms cubic-bezier(.66,.89,.47,.94) 2.9s 1 forwards;
+      }
+      [id="7-3"]{
+        transform: translateX(-112px) translateY(-78px);
+        opacity: 0;
+        animation: firstAppearing 450ms cubic-bezier(.66,.89,.47,.94) 2.9s 1 forwards, seventhThirdPositioning 800ms cubic-bezier(0.315, 1.065, 0.750, 1.005) 4.35s 1 forwards;
+      }
+      [id="7-3-scale-max"]{
+        transform: scaleY(0.0);
+        transform-box: fill-box;
+        transform-origin: bottom;
+        animation: seventhScaleGrowing 800ms cubic-bezier(0.315, 1.065, 0.750, 1.005) 4.35s 1 forwards;
+      }
+    }
+      @media(min-width: 1200px){
+        svg{
+          transform: scale(1.2);
         }
       }
     }
@@ -68,13 +622,29 @@
       font-size: 18px;
       line-height: 23px;
     }
-
+      &__list{
+        &__item{
+          &--down{
+            overflow: hidden;
+            .example-forms__list__item__image-wrapper{
+              transform: scale(1.4);
+              margin-bottom: -100px;
+            }
+          }
+        }
+    }
     .example-forms{
       &__list{
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
         &__item{
+          &-wrapper{
+            svg{
+              width: 100%;
+              height: 100%;
+            }
+          }
           &--spacing{
             @include item-spacing(30px);
             &>section{
@@ -87,16 +657,23 @@
               &-big{
                 width: 57.26%;
                 .example-forms__list__item{
+                  svg{
+                    margin-top: 0px;
+                  }
                   &__down-bar{
                       justify-content: space-between;
                       &__link{
                         &--info , &--play{
                           width: 44.30%;
+                          height: min-content;
+                          margin-top: auto;
                           }
                       }
                       &__button{
                         &--blue{
                           width: 44.30%;
+                          height: min-content;
+                          margin-top: auto;
                         }
                       }
                   }
@@ -105,6 +682,10 @@
               &-small{
                 width: 40.17%;
                 .example-forms__list__item{
+                  svg{
+                    margin-top: 0;
+                    width: 100%;
+                  }
                   &__down-bar{
                       justify-content: center;
                       align-items: flex-end;
