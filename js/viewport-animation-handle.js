@@ -1,14 +1,19 @@
 const inViewport = (entries, observer) => {
   entries.forEach(entry => {
-    entry.target.classList.toggle("is-in-viewport", entry.isIntersecting);
+    if (entry.isIntersecting) {
+      setTimeout(() => { entry.target.classList.add("is-in-viewport"); }, 400);
+    } else {
+      entry.target.classList.remove('is-in-viewport');
+    }
+
   });
 };
-
 const Obs = new IntersectionObserver(inViewport);
-const obsOptions = {};
+const Elements = document.querySelectorAll('.services section .example-forms__list__item__image-wrapper');
+const obsOptions = {
+  threshold: 1,
+};
 
-// Attach observer to every section with animation:
-const ELs_inViewport = document.querySelectorAll('.services section');
-ELs_inViewport.forEach(EL => {
+Elements.forEach(EL => {
   Obs.observe(EL, obsOptions);
 });

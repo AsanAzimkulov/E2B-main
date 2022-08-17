@@ -29,35 +29,31 @@ document.querySelector('.modal-preview').addEventListener('click', function (e) 
 
 const subscribersModalPreview = [];
 
-// const createSubscribe = (el, sectionSelector) => {
-//   if (el) {
-//     subscribersModalPreview.push({
-//       element: el,
-//       sectionSelector
-//     })
-//   }
-// };
+
+const createSubscribe = (el, sectionSelector) => {
+  if (el) {
+    subscribersModalPreview.push({
+      element: el,
+      sectionSelector
+    })
+  }
+};
 
 
-// const serviceSchemeButton = document.querySelector('.service-scheme__button--blue-button');
-// const serviceSchemeLink = document.querySelector('.service-scheme__button--link');
 
-// createSubscribe(serviceSchemeButton, '.service-scheme');
-// createSubscribe(serviceSchemeLink, '.service-scheme');
+const promoButton = document.querySelector('.email-agency .btn__main');
 
-// const promoInvertButton = document.querySelector('.promo--invert .btn__main.popup__consultation_start')
-// createSubscribe(promoInvertButton, '.promo--invert');
+createSubscribe(promoButton, '.email-agency');
 
-// const tableOrder = document.querySelectorAll('.packages__table-main__order__button').forEach(el => createSubscribe(el, '.packages'));
 
-// const exampleFormsLinkInfo = document.querySelectorAll('.example-forms__list__item__down-bar__link--info').forEach(el => createSubscribe(el, '.example-forms'));
-// const exampleFormsIconLinkInfo = document.querySelectorAll('.example-forms__list__item__down-bar__price-with-icon__icon-link').forEach(el => createSubscribe(el, '.example-forms'));
+const servicesLinks = document.querySelectorAll('.services .example-forms__list__item__down-bar__button__link').forEach(el => createSubscribe(el, el.closest('section')));
 
 
 
 
 subscribersModalPreview.forEach((sub) => {
-  sub.element.addEventListener('click', function () {
+  sub.element.addEventListener('click', function (e) {
+    e.preventDefault();
     onOpenModalPreview();
     preventScrollToTop(sub.sectionSelector);
   })

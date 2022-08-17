@@ -304,39 +304,113 @@ document.querySelector('.modal-preview').addEventListener('click', function (e) 
 
 const subscribersModalPreview = [];
 
-// const createSubscribe = (el, sectionSelector) => {
-//   if (el) {
-//     subscribersModalPreview.push({
-//       element: el,
-//       sectionSelector
-//     })
-//   }
-// };
+
+const createSubscribe = (el, sectionSelector) => {
+  if (el) {
+    subscribersModalPreview.push({
+      element: el,
+      sectionSelector
+    })
+  }
+};
 
 
-// const serviceSchemeButton = document.querySelector('.service-scheme__button--blue-button');
-// const serviceSchemeLink = document.querySelector('.service-scheme__button--link');
 
-// createSubscribe(serviceSchemeButton, '.service-scheme');
-// createSubscribe(serviceSchemeLink, '.service-scheme');
+const promoButton = document.querySelector('.email-agency .btn__main');
 
-// const promoInvertButton = document.querySelector('.promo--invert .btn__main.popup__consultation_start')
-// createSubscribe(promoInvertButton, '.promo--invert');
+createSubscribe(promoButton, '.email-agency');
 
-// const tableOrder = document.querySelectorAll('.packages__table-main__order__button').forEach(el => createSubscribe(el, '.packages'));
 
-// const exampleFormsLinkInfo = document.querySelectorAll('.example-forms__list__item__down-bar__link--info').forEach(el => createSubscribe(el, '.example-forms'));
-// const exampleFormsIconLinkInfo = document.querySelectorAll('.example-forms__list__item__down-bar__price-with-icon__icon-link').forEach(el => createSubscribe(el, '.example-forms'));
+const servicesLinks = document.querySelectorAll('.services .example-forms__list__item__down-bar__button__link').forEach(el => createSubscribe(el, el.closest('section')));
 
 
 
 
 subscribersModalPreview.forEach((sub) => {
-  sub.element.addEventListener('click', function () {
+  sub.element.addEventListener('click', function (e) {
+    e.preventDefault();
     onOpenModalPreview();
     preventScrollToTop(sub.sectionSelector);
   })
 });
+
+// Добавляем класс для отслеживания активного слайда
+document.querySelector('.reviewers .slider__item_active').classList.add('slider__item--active');
+
+
+document.querySelectorAll('.reviewers .slider__item').forEach((el) => {
+  el.addEventListener('click', (e) => {
+    document.querySelectorAll('.reviewers .slider__item').forEach(el => el.classList.remove('slider__item--active'));
+    e.target.closest('.slider__item').classList.add('slider__item--active')
+  })
+})
+
+function transferContentToModalReviews() {
+  document.querySelectorAll('.reviews-modal .reviews__text-wrapper p').forEach(p => p.remove());
+  const paragraphs = document.querySelector('.reviews .slider__item--active').getAttribute('data-read-more').split('///');
+
+  paragraphs.forEach(text => {
+    const p = document.createElement('p');
+    p.classList.add('reviews__text');
+    p.textContent = text;
+    const textWrapper = document.querySelector('.reviews-modal .reviews__text-wrapper').append(p);
+  });
+
+  const titleText = document.querySelector(' .reviews .reviews__title').textContent;
+  document.querySelectorAll('.reviews-modal .reviews__title').forEach(title => title.textContent = titleText);
+  const modal = document.querySelector('.reviews-modal');
+  modal.querySelectorAll('.reviews__image').forEach(img => img.setAttribute('src', (
+    document.querySelector('.reviews .reviews__image').getAttribute('src')
+  )));
+
+};
+const reviewsModal = document.querySelector('.reviews-modal');
+
+function onOpenModalReviews() {
+  transferContentToModalReviews();
+
+
+  document.querySelector('html').classList.add('no-scroll-y');
+  document.body.classList.add('modal-reviews-show');
+  document.body.classList.add('no-scroll-y');
+
+  function preventScrollToTop(sectionSelector) {
+    const offset = $(sectionSelector).offset();
+    $('body').animate({
+      scrollTop: offset.top,
+      scrollLeft: offset.left
+    });
+  }
+
+  preventScrollToTop('.reviews');
+}
+
+function onCloseModalReviews() {
+  $('html').removeClass('no-scroll-y');
+  // Убираем предыдущий скролл
+  document.querySelector('.reviews-modal').scrollTo(0, 0);
+  document.body.classList.remove('modal-reviews-show');
+  document.querySelector('html').classList.add('remove');
+  document.body.classList.remove('no-scroll-y');
+}
+
+document.body.addEventListener('click', (e) => {
+  let path = e.path || (e.composedPath && e.composedPath());
+  if (path.some(el => el.className === "reviews__read-more")) {
+    e.preventDefault();
+    onOpenModalReviews();
+  }
+});
+
+document.querySelector('.reviews-modal__close').addEventListener('click', onCloseModalReviews);
+
+document.querySelector('.reviews-modal').addEventListener('click', function (e) {
+  if (e.target === this) {
+    onCloseModalReviews();
+  }
+});
+
+
 
 const indicators = document.querySelectorAll('.side-nav__list__item-link');
 let indicatorsClassSelectors = document.querySelectorAll('.side-nav__list__item');
@@ -928,16 +1002,21 @@ ChiefSlider.prototype.refresh = function () {
 
 const inViewport = (entries, observer) => {
   entries.forEach(entry => {
-    entry.target.classList.toggle("is-in-viewport", entry.isIntersecting);
+    if (entry.isIntersecting) {
+      setTimeout(() => { entry.target.classList.add("is-in-viewport"); }, 400);
+    } else {
+      entry.target.classList.remove('is-in-viewport');
+    }
+
   });
 };
-
 const Obs = new IntersectionObserver(inViewport);
-const obsOptions = {};
+const Elements = document.querySelectorAll('.services section .example-forms__list__item__image-wrapper');
+const obsOptions = {
+  threshold: 1,
+};
 
-// Attach observer to every section with animation:
-const ELs_inViewport = document.querySelectorAll('.services section');
-ELs_inViewport.forEach(EL => {
+Elements.forEach(EL => {
   Obs.observe(EL, obsOptions);
 });
 

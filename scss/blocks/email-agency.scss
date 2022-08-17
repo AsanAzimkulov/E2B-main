@@ -1,5 +1,8 @@
-.email-agency{position: relative;
+.email-agency{
+  position: relative;
+  overflow:hidden;
   &::after{
+    max-width: 100vw;
     position: absolute;
     height: 500px;
     top: 430px;

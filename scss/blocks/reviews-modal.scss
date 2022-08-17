@@ -1,0 +1,104 @@
+.reviews-modal{
+  box-sizing: padding-box;
+  font-family: 'Montserrat';
+  color: $black;
+  z-index: 20;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: none;
+
+  color: white;
+    &__image-wrapper{
+      display: none;
+      img{
+        height: auto !important;
+        width: auto !important;
+      }
+    }
+  .reviews__wrapper-image-text{
+    z-index: 30;
+    position: relative;
+    .reviews-modal__close{
+      cursor: pointer;
+      position: absolute;
+      top: 15.5px;
+      right: 15.5px;
+      width: 27px;
+      height: 27px;
+      background-size: 27px 27px;
+      background-image: url('../../images/icons/crosshair-white.svg');
+    }
+    
+    height: fit-content;
+    @include ver-m(15vh, 10vh);
+    background: $gr-dark-blue;
+    box-shadow: -15px 15px 30px rgba(230, 230, 230, 0.2), 15px -15px 30px rgba(230, 230, 230, 0.2);
+    border-radius: 30px;
+    @include ver-p(30px);
+    padding-top: 50px;
+  }
+  @media(min-width: 768px){
+    .reviews__image-wrapper--mobile{
+      display: none;
+    }
+    .reviews__wrapper-image-text{
+      padding: 0 30px;
+      @include ver-m(0px);
+      margin-top: 20vh;
+    }
+    .reviews__text-wrapper{
+      display: block;
+      margin-top: 50px;
+    }
+    &__image-wrapper{
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      order: -1;
+      margin-top: 50px;
+    }
+  }
+
+  @media(min-width: 1024px){
+    .reviews__wrapper-image-text{
+      @include ver-m(10vh);
+    }
+  }
+
+  @media(min-width: 1400px){
+    .reviews__wrapper-image-text{
+      padding: 0 50px;
+      .reviews-modal__close{
+        position: absolute;
+        top: 25.5px;
+        right: 25.5px;
+        width: 37px;
+        height: 37px;
+        background-size: 37px 37px;
+        background-image: url('../../images/icons/crosshair-white.svg');
+      }
+    }
+    .reviews__text-wrapper{
+      display: block;
+      margin-top: 80px;
+    }
+  }
+  @media(min-width: 1920px){
+    .reviews__wrapper-image-text{
+      margin-top: 20vh;
+      margin-bottom: 15vh;
+    }
+    .reviews__text-wrapper{
+      margin-bottom: 60px;
+    }
+  }
+
+}
+.modal-reviews-show .reviews-modal{
+  display: block;
+}
