@@ -570,6 +570,7 @@
 }
 @mixin m_card(){
   background: white;
+  cursor: pointer;
   &:hover{
     background: #F9FEFF;
   }
