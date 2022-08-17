@@ -55,6 +55,5 @@ subscribersModalPreview.forEach((sub) => {
   sub.element.addEventListener('click', function (e) {
     e.preventDefault();
     onOpenModalPreview();
-    preventScrollToTop(sub.sectionSelector);
   })
 });

@@ -28,15 +28,16 @@
   overflow-y: hidden;
 }
 
-.page {
-  overflow-x: hidden;
-}
 .page__body {
   overflow-x: hidden;
 }
 .page__body > section:not(.breadcrumbs) {
   max-width: 100vw;
   overflow-x: hidden;
+}
+
+.side-nav {
+  z-index: 8 !important;
 }
 
 @media (max-width: 991px) {
@@ -3616,10 +3617,11 @@
 }
 .reviews-modal__image-wrapper {
   display: none;
+  height: auto !important;
 }
 .reviews-modal__image-wrapper img {
-  height: auto !important;
-  width: auto !important;
+  height: auto;
+  width: auto;
 }
 .reviews-modal .reviews__wrapper-image-text {
   z-index: 30;
@@ -3644,7 +3646,32 @@
   background-size: 27px 27px;
   background-image: url("../../images/icons/crosshair-white.svg");
 }
-@media (min-width: 768px) {
+@media (max-width: 991px) {
+  .reviews-modal .reviews__wrapper-image-text {
+    flex-wrap: wrap !important;
+  }
+  .reviews-modal .reviews__image-wrapper {
+    width: 100% !important;
+    margin-bottom: 25px !important;
+    height: fit-content !important;
+    margin-left: 25px !important;
+  }
+  .reviews-modal .reviews__image-wrapper img {
+    margin: 0 auto !important;
+  }
+  .reviews-modal .reviews__title--mobile {
+    margin: 0 auto !important;
+    display: block !important;
+  }
+  .reviews-modal .reviews__title--tablet {
+    display: none !important;
+  }
+  .reviews-modal .reviews__text-wrapper {
+    width: 100% !important;
+    order: 1 !important;
+  }
+}
+@media (min-width: 991px) {
   .reviews-modal .reviews__image-wrapper--mobile {
     display: none;
   }

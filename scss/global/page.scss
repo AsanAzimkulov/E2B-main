@@ -1,5 +1,4 @@
 .page{
-  overflow-x: hidden;
   &__body{
     overflow-x: hidden;
     &>section:not(.breadcrumbs){
@@ -8,6 +7,12 @@
     }
   }
 
+}
+
+// Исправление, сайдбар перекрывал хедер.
+
+.side-nav{
+  z-index: 8 !important;
 }
 
 @media (max-width: 991px){

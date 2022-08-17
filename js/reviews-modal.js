@@ -1,4 +1,5 @@
 // Добавляем класс для отслеживания активного слайда
+document.querySelector('.reviewers .slider__item_active').classList.add("slider__item--active");
 document.querySelectorAll('.reviewers .slider__item').forEach((el) => {
   el.addEventListener('click', (e) => {
     document.querySelectorAll('.reviewers .slider__item').forEach(el => el.classList.remove('slider__item--active'));
@@ -34,16 +35,6 @@ function onOpenModalReviews() {
   document.querySelector('html').classList.add('no-scroll-y');
   document.body.classList.add('modal-reviews-show');
   document.body.classList.add('no-scroll-y');
-
-  function preventScrollToTop(sectionSelector) {
-    const offset = $(sectionSelector).offset();
-    $('body').animate({
-      scrollTop: offset.top,
-      scrollLeft: offset.left
-    });
-  }
-
-  preventScrollToTop('.reviews');
 }
 
 function onCloseModalReviews() {
