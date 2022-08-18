@@ -235,7 +235,6 @@
 }
 
 .modal-preview {
-  box-sizing: padding-box;
   font-family: "Montserrat";
   color: #2D2D2D;
   z-index: 20;
@@ -3602,7 +3601,6 @@
 }
 
 .reviews-modal {
-  box-sizing: padding-box;
   font-family: "Montserrat";
   color: #2D2D2D;
   z-index: 20;
@@ -4011,7 +4009,7 @@
 }
 @keyframes firstScaleFourtyThree {
   from {
-    width: 8.93;
+    width: 8.93px;
   }
   to {
     width: 154.8px;
@@ -4019,7 +4017,7 @@
 }
 @keyframes firstScaleFiftySeven {
   from {
-    width: 8.93;
+    width: 8.93px;
   }
   to {
     width: 205.2px;
