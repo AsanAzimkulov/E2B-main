@@ -115,6 +115,10 @@ if ($(window).width() < 993) {
     lastTarget = e.currentTarget;
     pasteBoard.innerHTML = $(e.currentTarget).siblings().get(0).outerHTML;
     $(pasteBoard).children('ul').show().css('padding-left', '0px');
+    // Active menu titles highlight
+    $(subMenuItemsTitles).css('background-color', '#FFFFFF')
+    $(e.currentTarget).css('background-color', '#FCFCFC');
+
 
     // Resize sub-menu, if pasteBoard scrolling
     const pasteBoardHeight = $($(pasteBoard).children('ul')).outerHeight();
@@ -991,10 +995,7 @@ const inViewport = (entries, observer) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       setTimeout(() => { entry.target.classList.add("is-in-viewport"); }, 400);
-    } else {
-      entry.target.classList.remove('is-in-viewport');
     }
-
   });
 };
 const Obs = new IntersectionObserver(inViewport);

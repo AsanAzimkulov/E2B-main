@@ -2,10 +2,7 @@ const inViewport = (entries, observer) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       setTimeout(() => { entry.target.classList.add("is-in-viewport"); }, 400);
-    } else {
-      entry.target.classList.remove('is-in-viewport');
     }
-
   });
 };
 const Obs = new IntersectionObserver(inViewport);

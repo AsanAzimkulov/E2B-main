@@ -5,7 +5,10 @@
   }
   .header__menu > .menu > li:first-child > .sub-menu > li {
     margin-bottom: 20px !important;
-    width: 70% !important;
+    width: 63% !important;
+    @media(max-width: 1700px){
+      width: 70% !important;
+    }
     position: relative;
     &::after{
       position: absolute;
@@ -25,16 +28,31 @@
     width: 60%;
   }
   .header__menu > .menu > li:first-child > .sub-menu{
+    max-height: 100vh;
+    width: 120% !important;
     padding-bottom: 10px !important;
     align-content: flex-start;
+    @media(max-width: 1850px){
+      width: 103% !important;
+    }
+    @media(max-width: 1700px){
+      width: 112% !important;
+    }
     .sub-menu__paste-board{
-      width: 50%;
+      width: 57%;
       height: 0%;
       position: absolute;
       right: 0px;
+      @media(max-width: 1700px){
+        width: 50%;
+      }
       & > ul{
-        padding-bottom: 30px;
         padding-right: 10px;
+        padding-left: 50px !important;
+
+        @media(max-width: 1700px){
+          padding-left: 0px !important;
+        }
       }
     }
   }
