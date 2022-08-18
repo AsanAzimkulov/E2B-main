@@ -110,29 +110,72 @@ if ($(window).width() < 993) {
   let initialSubMenuHeight;
   let isInitialSubMenuHeightSet = false;
   let lastTarget;
+  $('.header__menu > .menu > li:nth-child(1) > a').on('click', () => {
+    // Checking if need scroll-y
+    const subMenuNative = document.querySelector('.header__menu > .menu > li:first-child > .sub-menu');
+    subMenuNative.scrollTo(0, 9999);
+    const scrollOffset = subMenuNative.scrollTop;
+    subMenuNative.scrollTo(0, 0);
+    if (scrollOffset < 25) {
+      $(subMenu).css('overflow-y', 'hidden');
+    } else {
+      $(subMenu).css('overflow-y', 'scroll');
+    }
+  });
+  $('.header__menu > .menu > li:nth-child(1) > a').mouseenter(() => {
+    // Checking if need scroll-y
+    const subMenuNative = document.querySelector('.header__menu > .menu > li:first-child > .sub-menu');
+    subMenuNative.scrollTo(0, 9999);
+    const scrollOffset = subMenuNative.scrollTop;
+    subMenuNative.scrollTo(0, 0);
+    if (scrollOffset < 25) {
+      $(subMenu).css('overflow-y', 'hidden');
+    } else {
+      $(subMenu).css('overflow-y', 'scroll');
+    }
+  });
   subMenuItemsTitles.mouseenter((e) => {
+
+
     if (e.currentTarget == lastTarget) return;
     lastTarget = e.currentTarget;
     pasteBoard.innerHTML = $(e.currentTarget).siblings().get(0).outerHTML;
     $(pasteBoard).children('ul').show().css('padding-left', '0px');
     // Active menu titles highlight
-    $(subMenuItemsTitles).css('background-color', '#FFFFFF')
-    $(e.currentTarget).css('background-color', '#FCFCFC');
+    $(subMenuItems).removeClass('header-active-highlight');
+    $($(e.currentTarget).parent('li')).addClass('header-active-highlight');
 
 
     // Resize sub-menu, if pasteBoard scrolling
-    const pasteBoardHeight = $($(pasteBoard).children('ul')).outerHeight();
+    const pasteBoardHeight = $($(pasteBoard).children('ul')).height();
     const subMenuHeight = $(subMenu).height();
     if (!isInitialSubMenuHeightSet) {
       initialSubMenuHeight = subMenuHeight;
       isInitialSubMenuHeightSet = true;
     }
 
-    if (pasteBoardHeight > subMenuHeight) {
-      subMenu.height(pasteBoardHeight);
+    if (pasteBoardHeight >= subMenuHeight) {
+      const maxSubMenuHeight = Number.parseFloat($(subMenu).css('maxHeight'));
+      if (pasteBoardHeight > maxSubMenuHeight) {
+        subMenu.height(maxSubMenuHeight);
+      } else {
+        subMenu.height(pasteBoardHeight);
+      }
     } else {
       subMenu.height(initialSubMenuHeight);
     }
+
+    // Checking if need scroll-y
+    const subMenuNative = document.querySelector('.header__menu > .menu > li:first-child > .sub-menu');
+    subMenuNative.scrollTo(0, 9999);
+    const scrollOffset = subMenuNative.scrollTop;
+    subMenuNative.scrollTo(0, 0);
+    if (scrollOffset < 25) {
+      $(subMenu).css('overflow-y', 'hidden');
+    } else {
+      $(subMenu).css('overflow-y', 'scroll');
+    }
+
 
   })
 
