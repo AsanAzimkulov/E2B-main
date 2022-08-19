@@ -3971,7 +3971,7 @@
 }
 @media (min-width: 992px) {
   .header .header__menu > .menu > li:first-child > .sub-menu {
-    max-height: calc(95vh - 70px - var(--body-padding-height)) !important;
+    max-height: calc(95vh - 70px) !important;
     width: 120% !important;
     padding-bottom: 0px !important;
     align-content: flex-start;
