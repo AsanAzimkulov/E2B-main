@@ -41,7 +41,7 @@
     width: 60%;
   }
   .header__menu > .menu > li:first-child > .sub-menu{
-    max-height: calc(94vh - 70px - var(--body-padding-height)) !important;
+    max-height: calc(87vh - 70px - var(--body-padding-height)) !important;
     &::after{
       position: absolute;
       content: "";
